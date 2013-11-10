@@ -1,5 +1,5 @@
-$iconSpritePath: url('/assets/glyphicons-halflings.png');
-$iconWhiteSpritePath: url('/assets/glyphicons-halflings-white.png');
+$iconSpritePath: asset-url('glyphicons-halflings.png', image);
+$iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 
 @import "bootstrap";
 body { padding-top: 70px; }
