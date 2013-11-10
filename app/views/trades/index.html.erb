@@ -37,6 +37,8 @@
         </div>
       </div>
 
+      <p ng-show="trades.length <= 0">There are no trades.</p>
+
       <div ng-repeat="trade in trades">
 
       <div class="row-fluid">
@@ -91,7 +93,7 @@
 
       <div class="row-fluid">
         <div class="span12">
-          <button class="btn btn-block btn-primary" ng-show="more" ng-click="loadMoreTrades()">More</button>
+          <button class="btn btn-block btn-primary" ng-show="more && trades.length > 0" ng-click="loadMoreTrades()">More</button>
         </div>
       </div>
 

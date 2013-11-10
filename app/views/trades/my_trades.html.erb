@@ -33,6 +33,10 @@
         </div>
       </div>
 
+      <% if @trades.empty? %>
+        <p>You have no trades.</p>
+      <% end %>
+
       <% @trades.order('created_at desc').each do |trade| %>
 
       <div class="row-fluid">
