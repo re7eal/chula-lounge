@@ -38,3 +38,5 @@ group :test do
 end
 
 gem 'angularjs-rails'
+
+gem 'rails_12factor', group: :production
