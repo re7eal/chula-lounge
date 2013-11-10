@@ -1,0 +1,16 @@
+.topic-box {
+	background-color: #e3e3e3;
+	display: block;
+	position: relative;
+	max-width: 100%;
+//	min-height: 170px;
+}
+
+.topic-box-title {
+	background-color: #a8bee3;
+	font-size: 18px;
+}
+
+.post-message-box {
+	padding-bottom: 35px;
+}

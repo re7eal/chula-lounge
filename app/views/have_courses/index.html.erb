@@ -1,0 +1,33 @@
+<h1>Listing have_courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course number</th>
+      <th>Course name</th>
+      <th>Course section</th>
+      <th>Trade</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @have_courses.each do |have_course| %>
+      <tr>
+        <td><%= have_course.course_number %></td>
+        <td><%= have_course.course_name %></td>
+        <td><%= have_course.course_section %></td>
+        <td><%= have_course.trade_id %></td>
+        <td><%= link_to 'Show', have_course %></td>
+        <td><%= link_to 'Edit', edit_have_course_path(have_course) %></td>
+        <td><%= link_to 'Destroy', have_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Have course', new_have_course_path %>

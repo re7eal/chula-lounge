@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course number:</strong>
+  <%= @want_course.course_number %>
+</p>
+
+<p>
+  <strong>Course name:</strong>
+  <%= @want_course.course_name %>
+</p>
+
+<p>
+  <strong>Course section:</strong>
+  <%= @want_course.course_section %>
+</p>
+
+<p>
+  <strong>Trade:</strong>
+  <%= @want_course.trade_id %>
+</p>
+
+<%= link_to 'Edit', edit_want_course_path(@want_course) %> |
+<%= link_to 'Back', want_courses_path %>

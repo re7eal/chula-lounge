@@ -1,0 +1,108 @@
+<div ng-controller="MyTradeController">
+  <div class="row-fluid">
+    <div class="span12">
+      <%= form_tag search_trades_path, :method => :get do %>
+      <div class="control-group">
+        <div class="input-append">
+          <%= text_field_tag :search, params[:search], :class => 'span2', :id => 'appendedInputButton-03', :placeholder => 'Search Trades' %>
+          <div class="btn-group">
+            <%= button_tag '', :name => nil, :class => 'btn' do %>
+            <%= content_tag :span, :class => 'fui-search' do %>
+            <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span3">
+      <div class="well">
+        <p>Hot Courses</p>
+        3800250 Human Relations <br /> 3503111 Intro to Classic Music
+      </div>
+    </div>
+
+    <div class="span9">
+
+      <div class="row-fluid mbl">
+        <div class="span12">
+          <h3>My Trades</h3>
+        </div>
+      </div>
+
+      <% @trades.order('created_at desc').each do |trade| %>
+
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="well">
+            <div class="row-fluid mbm">
+              <div class="span8">
+                <div class="media">
+                  <a class="pull-left" href="#"> <img class="media-object"
+                    src="custom/images/profile-1-pic-64.jpg">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">
+                      <%= link_to trade.user.name, trade.user %> wants to trade
+                    </h4>
+                    <%= format_datetime(trade.created_at) %>
+                  </div>
+                </div>
+              </div>
+              <div class="span4">
+                <div style="text-align: right">Trade #<%= trade.id %></div>
+                <div class="pull-right">
+                  <a href="#confirmDialog" class="btn btn-small btn-primary" data-toggle="modal" ng-click="id = <%= trade.id %>">Mark as finished</a>
+                  <%= link_to 'Go to trade', trade, :class => 'btn btn-small btn-primary' %>
+                </div>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span6">
+                <div class="popover topic-box">
+                  <h3 class="popover-title topic-box-title">Have</h3>
+                  <div class="popover-content">
+                    <% trade.have_courses.each do |have_course| %>
+                    <p><%= have_course.course_number %> <%= have_course.course_name %> (<%= have_course.course_section %>)</p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="popover topic-box">
+                  <h3 class="popover-title topic-box-title">Want</h3>
+                  <div class="popover-content">
+                    <% trade.want_courses.each do |want_courses| %>
+                    <p><%= want_courses.course_number %> <%= want_courses.course_name %> (<%= want_courses.course_section %>)</p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <div id="confirmDialog" class="modal hide fade">
+    <div class="modal-header">
+      <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+      <h3>Confirm</h3>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure you want to mark trade #{{id}} as finished?</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">No</button>
+      <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true" ng-click="updateFinished(id)">Yes</button>
+    </div>
+  </div>
+
+</div>

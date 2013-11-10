@@ -1,0 +1,54 @@
+<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-03"></button>
+<%= link_to "Chula Lounge", root_path, :class => 'brand' %>
+<div class="nav-collapse collapse" id="nav-collapse-03">
+	<ul class="nav">
+		<li><a href="#fakelink"> Wikis </a></li>
+		<li class="<%= 'active' if trade_pages %>"><%= link_to 'Trades', trades_path %>
+			<ul>
+				<li class="<%= 'active' if current_page?(my_trades_path) %>"><%= link_to 'My Trades', my_trades_path %></li>
+				<li class="<%= 'active' if current_page?(new_trade_path) %>"><%= link_to 'New Trade', new_trade_path %></li>
+			</ul> <!-- /Sub menu --></li>
+		<li><a href="#fakelink"> Forum </a></li>
+		<li><a href="#fakelink"> About Us </a></li>
+	</ul>
+	<!-- /nav -->
+
+<!--
+	<form class="navbar-search form-search pull-left" action=""
+		align="center">
+		<div class="input-append">
+			<input type="text" class="search-query span2" placeholder="Search the site">
+			<button type="submit" class="btn btn-large">
+				<i class="fui-search"></i>
+			</button>
+		</div>
+	</form>
+-->
+
+	<ul class="nav pull-right">
+
+		<% if user_signed_in? %>
+		<li><%= link_to current_user.name, current_user %></li>
+		<li class="divider"></li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle"
+			data-toggle="dropdown"> Settings <b class="caret"></b>
+		</a>
+			<ul class="dropdown-menu">
+				<li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+				<li><a href="#fakelink">Profile Settings</a></li>
+				<% if current_user.has_role? :admin %>
+				<li class="divider"></li>
+				<li><%= link_to 'Admin', users_path %></li> <% end %>
+				<li class="divider"></li>
+				<li><%= link_to 'Logout', destroy_user_session_path,
+					:method=>'delete' %></li>
+			</ul></li> <% else %>
+		<li><a href="#login" data-toggle="modal">Login</a></li>
+		<li><%= link_to 'Sign up', new_user_registration_path %></li> <% end
+		%>
+
+
+	</ul>
+	<!-- /nav -->
+</div>
+<!--/.nav-collapse -->

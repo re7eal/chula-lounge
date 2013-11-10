@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @trade_message.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @trade_message.user_id %>
+</p>
+
+<p>
+  <strong>Trade:</strong>
+  <%= @trade_message.trade_id %>
+</p>
+
+<%= link_to 'Edit', edit_trade_message_path(@trade_message) %> |
+<%= link_to 'Back', trade_messages_path %>
