@@ -5,6 +5,8 @@
 	<%= display_base_errors resource %>
 	<%= f.input :name, :autofocus => true %>
 	<%= f.input :email, :required => true %>
+	<strong>* Use @student.chula.ac.th to register only</strong>
+	<hr>
 	<%= f.input :password, :label => 'Password (at least 8 characters)', :required => true %>
 	<%= f.input :password_confirmation, :required => true %>
 	<%= f.button :submit, 'Sign up', :class => 'btn-primary' %>

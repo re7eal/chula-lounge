@@ -20,7 +20,7 @@ ChulaLounge::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -79,6 +79,13 @@ ChulaLounge::Application.configure do
       :password  => ENV["MANDRILL_API_KEY"]
     }
 
+  config.action_mailer.default_url_options = { :host => 'chula-lounge.herokuapp.com' }
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
