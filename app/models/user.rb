@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   has_many :trades
   has_many :trade_messages
+  has_many :comments
+  has_many :ratings
+  has_many :likes
+  has_many :dislikes
   
   before_create :assign_role
 

@@ -1,0 +1,98 @@
+<div class="container-fluid course-index" ng-controller="PageCourseIndex" ng-init="init(<%=@id%>)">
+	<div class="row-fluid">
+		<div class="span4">
+			<div class="row-fluid">
+			  <div class="span12 rating-wrapper">
+				<div class="span4 rating-box">{{rating.know_rating}}</div>
+				<div class="span4 rating-box">{{rating.diff_rating}}</div>
+				<div class="span4 rating-box">{{rating.grade_rating}}</div>
+			  </div>
+			</div>
+			<div class="row-fluid">
+			  <div class="span12 filter-wrapper">
+			  	<div ng-repeat="teach in teaches |orderBy:'year':true" class="filter-box">
+			  		<h6>Year {{teach.year}}</h6>
+			  		<span ng-repeat="prof in teach.professors">Professor {{prof.name}} {{prof.last_name}}<br></span>
+			  	</div>
+			  </div>
+			</div>
+		</div>
+		<div class="span8">
+			<div class="row-fluid">
+				<div class="span12 box">
+					<h4>{{ course.number }} : {{ course.title }}</h6>
+					<p id="description">
+						{{course.description}}
+					</p>
+					<div ng-click="expandDescription()" class="middle">{{ message }}</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12 box" id="review">
+					<div ng-repeat="review in top_comments" class="review-box">
+						<div class="content">{{review.content}}</div>
+						<div class="footer">
+							<ul class="nav pull-left">
+								<li><a><span class="badge">{{review.likes}}</span> Like</a></li>
+								<li><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
+							</ul>
+							<div class="pull-right author">{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
+						</div>
+					</div>
+					<div class="middle" data-toggle="modal" href="#reviewModal">
+					Click to expand
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="reviewModal" class="modal fade hide" role="dialog" tabindex="-1" aria-labelledby="reviewModel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+         			 <h4 class="modal-title">Course Review</h4>
+				</div>
+				<div class="modal-body">
+					<div ng-repeat="review in comments" class="review-box">
+						<div class="content">{{review.content}}</div>
+						<div class="footer">
+							<ul class="nav pull-left">
+								<li><a><span class="badge">{{review.likes}}</span> Like</a></li>
+								<li><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
+							</ul>
+							<div class="pull-right author">
+							{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="modal-footer">
+					<div>
+						<textarea id="review-post" class="span12 pull-left"></textarea>
+					</div>
+					<div class="pull-left dropdown">
+						<ul class="nav">
+							<li><a>Year</a></li>
+							<li><a>Anon</a></li>
+						</ul>
+						<ul class="dropdown-menu dropdown-inverse" role="menu">
+							<li role="presentation">
+								<a role="menuitem">2013</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem">2012</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem">2011</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pull-right">
+						<button class="btn btn-default">Submit</button>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
