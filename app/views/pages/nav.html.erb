@@ -1,0 +1,51 @@
+<div class="body container-fluid page-nav" ng-controller="PageNav" ng-init="init(<%= @id %>); back=<%=@back%>">
+  <div id="main" class="row-fluid" ng-class="{column3 : selectedColumn(3),
+   column2 : selectedColumn(2),
+   column1 : selectedColumn(1)}">
+    <div id="curriculum" class="span4">
+        <ul class="big-show">
+          <li ng-repeat="curriculum in curriculums |orderBy:'abbreviation':false" ng-click="curriculumClick(curriculum)" ng-class="{active : curriculumSelected == curriculum}">
+              <div class="content">
+                <h4>{{curriculum.abbreviation}}</h4>
+                {{curriculum.name}}
+              </div>
+              <div eclass="fui-arrow-right"></div>  
+          </li>
+        </ul>
+    </div>
+    <div id="year" class="span4" ng-class="{column2 : curriculumSelected != null, column1 : curriculumSelected == null  }">
+        <ul class="small-show test" ng-show="curriculumSelected != null">
+        	<li ng-repeat="year in years" ng-click="yearClick(year)" ng-class="{active : yearSelected == year }">
+        	  <div class="content">
+                <h4>Year {{year.y}} Semester {{year.s}}</h4>
+              </div>
+              <div class="fui-arrow-right"></div>  
+        	</li>
+        </ul>
+    </div>
+    <div id="course" class="span4" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
+      	<ul class="small-show test" ng-show="curriculumSelected != null && yearSelected != null">
+      		<li ng-repeat="course in courses">
+      		  <a class="content" ng-href="{{id}}/course/{{course.id}}">
+      		    <h4><span class="cnum">{{course.number}} : </span> {{course.title}}</h4>
+      		  </a>
+      		</li>
+      	</ul>
+    </div>
+  </div>
+  <div class="row-fluid" style="height:0px">
+    <div class="span12" style="height:0px">
+    <div id="search-tool" class="span4">
+          <div class="footer search">
+            <!-- AJAX CALL ONLY -->
+            <div class="search-wrapper span11 pull-left">
+              <input id="search-course" type="search" placeholder="Find your course">
+            </div>
+            <div class="fui-search pull-right" style="display:inline-block;"></div>
+          </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>

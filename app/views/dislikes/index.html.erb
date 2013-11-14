@@ -1,0 +1,25 @@
+<h1>Listing dislikes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dislikes.each do |dislike| %>
+      <tr>
+        <td><%= link_to 'Show', dislike %></td>
+        <td><%= link_to 'Edit', edit_dislike_path(dislike) %></td>
+        <td><%= link_to 'Destroy', dislike, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dislike', new_dislike_path %>
