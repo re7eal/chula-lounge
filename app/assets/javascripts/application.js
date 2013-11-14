@@ -14,8 +14,6 @@
 //= require_tree ./jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require bootstrap-typeahead-rails
-//= require hogan.js
 //= require_tree ./flat-ui
 //= require flatui_other
 //= require angular

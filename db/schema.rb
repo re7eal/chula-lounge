@@ -13,81 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20131110070432) do
 
-  create_table "comments", force: true do |t|
-    t.text     "content"
-    t.date     "timestamp"
-    t.integer  "course_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "courses", force: true do |t|
-    t.string   "title"
-    t.integer  "number"
-    t.text     "description"
-    t.integer  "year"
-    t.integer  "semester"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "courses_curriculums", force: true do |t|
-    t.integer "course_id"
-    t.integer "curriculum_id"
-  end
-
-  create_table "curriculums", force: true do |t|
-    t.string   "name"
-    t.string   "abbreviation"
-    t.integer  "faculty_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dislikes", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "comment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "faculties", force: true do |t|
-    t.string   "name"
-    t.string   "abbreviation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "have_courses", force: true do |t|
     t.string   "course_number"
     t.string   "course_name"
     t.integer  "course_section"
     t.integer  "trade_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "likes", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "comment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "professors", force: true do |t|
-    t.string   "name"
-    t.string   "last_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ratings", force: true do |t|
-    t.integer  "know_rating"
-    t.integer  "diff_rating"
-    t.integer  "grade_rating"
-    t.integer  "course_id"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,14 +32,6 @@ ActiveRecord::Schema.define(version: 20131110070432) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
-
-  create_table "teaches", force: true do |t|
-    t.integer  "professor_id"
-    t.integer  "course_id"
-    t.integer  "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "trade_messages", force: true do |t|
     t.text     "content"
