@@ -7,7 +7,12 @@
 				<div class="span4 rating-box">{{rating.diff_rating}}</div>
 				<div class="span4 rating-box">{{rating.grade_rating}}</div>
 			  </div>
+			  <!-- Button trigger modal -->
+<button class="btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
+  Launch demo modal
+</button>
 			</div>
+
 			<div class="row-fluid">
 			  <div class="span12 filter-wrapper">
 			  	<div ng-repeat="teach in teaches |orderBy:'year':true" class="filter-box">
@@ -96,3 +101,26 @@
 		</div>
 	</div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+            <div class="ui-slider-segment"></div>
+            <div class="ui-slider-segment"></div>
+            <div class="ui-slider-segment"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="fModalBtn" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
