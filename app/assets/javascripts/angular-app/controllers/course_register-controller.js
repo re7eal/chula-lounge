@@ -163,7 +163,6 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 	$scope.save = function() {
 		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
 		delete_teach_professor($scope.data.teaches);
-		console.log($scope.data);
 		$http({method:"POST", url:'/save/courses.json', data: $scope.data}).success(function(data) {
 			console.log(data);
 		}).error(function(data) {

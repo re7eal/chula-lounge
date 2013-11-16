@@ -80,7 +80,11 @@ def index
     @course = Course.new(course_params)
 
     respond_to do |format|
-      format.json {render json: @course}
+      if @course.valid?
+        format.json { render json: @course}
+      else
+        format.json { render json: @course.errors, status: :unprocessable_entity }
+      end
     end
 
   end
