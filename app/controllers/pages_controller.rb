@@ -3,12 +3,12 @@ class PagesController < ApplicationController
     #add_breadcrumb "title", :my_path, :title => "course.name"
   layout "page-application"
   def index
-    add_breadcrumb "Home", :root_path
+    add_breadcrumb "Home", :pages_path
   end
 
   def nav
-    add_breadcrumb "Home", :root_path
-    add_breadcrumb Faculty.find(params[:id]).abbreviation,
+   add_breadcrumb "Home", :pages_path
+   add_breadcrumb Faculty.find(params[:id]).abbreviation,
   	@id = params[:id]
   	@back = false
 
@@ -18,9 +18,10 @@ class PagesController < ApplicationController
   end
 
   def course_index
-    add_breadcrumb "Home", :root_path
-    add_breadcrumb Faculty.find(params[:id]).abbreviation, "/pages/nav/1"
-    add_breadcrumb Course.find(params[:cid]).title
+   add_breadcrumb "Home", :pages_path
+
+   add_breadcrumb Faculty.find(params[:id]).abbreviation, "/pages/nav/" + params[:id]
+   add_breadcrumb Course.find(params[:cid]).title
     
   	@id = params[:cid]
 
