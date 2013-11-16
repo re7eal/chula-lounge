@@ -1,5 +1,5 @@
 <div class="body container-fluid page-nav" ng-controller="PageNav" ng-init="init(<%= @id %>); back=<%=@back%>">
-  <div id="main" class="row-fluid" ng-class="{column3 : selectedColumn(3),
+  <div id="nav-main" class="row-fluid" ng-class="{column3 : selectedColumn(3),
    column2 : selectedColumn(2),
    column1 : selectedColumn(1)}">
     <div id="curriculum" class="span4">
@@ -41,7 +41,7 @@
             <div class="search-wrapper span11 pull-left">
               <input id="search-course" type="search" placeholder="Find your course">
             </div>
-            <div class="fui-search pull-right" style="display:inline-block;"></div>
+            <div class="pull-right" style="display:inline-block;"><span class="fui-search"></div>
           </div>
     </div>
     </div>

@@ -56,6 +56,7 @@ window.onload = function() {
 			'fui-plus-inverted' : '&#xe02a;'
 		},
 		els = document.getElementsByTagName('*'),
+
 		i, attr, html, c, el;
 	for (i = 0; ; i += 1) {
 		el = els[i];

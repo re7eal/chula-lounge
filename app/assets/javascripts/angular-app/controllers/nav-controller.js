@@ -127,7 +127,7 @@ App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 
 			$scope.init = function(id) {
 				$scope.id = id;
-				$http({method:'GET', url: '/faculties/' + id}).
+				$http({method:'GET', url: '/faculties/' + id + '.json'}).
 						success(function(data){
 							$scope.curriculums = data.curriculums;		
 						});
@@ -150,7 +150,7 @@ App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 
 			initSearchBar();
 
-			var mainHeight = function(){return $('#main').height(); }
+			var mainHeight = function(){return $('#nav-main').height(); }
 			
 			$scope.$watch(mainHeight, function(newValue, oldValue){
 				if(newValue != oldValue) $scope.resize(newValue);

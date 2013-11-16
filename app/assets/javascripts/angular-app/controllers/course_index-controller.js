@@ -109,7 +109,7 @@ App.controller('PageCourseIndex', ['$scope', '$http', function($scope, $http){
 
 	$scope.init = function(id) {
 		
-	$http({method:'GET', url: '/courses/' + id}).
+	$http({method:'GET', url: '/courses/' + id + '.json'}).
 		  success(function(data) {
 		  		$scope.course = data;
 				$scope.comments = $scope.course.comments;

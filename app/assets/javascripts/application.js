@@ -21,5 +21,7 @@
 //= require angular
 //= require angular-resource
 //= require angular-app/main
-//= require_tree ./angular-app/controllers
-//= require_tree
+//= require_tree ./angular-app
+//= require_tree ./jquery
+//= require_tree ./jquery-plugins
+//= require_directory .

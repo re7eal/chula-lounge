@@ -15,3 +15,11 @@ App.factory 'HaveCourse', ['$resource', ($resource) ->
 App.factory 'WantCourse', ['$resource', ($resource) ->
   $resource '/want_courses.json'
 ]
+
+App.factory 'Professor', ['$resource', ($resource) ->
+  $resource '/professors.json'
+]
+
+App.factory 'Teach', ['$resource', ($resource) ->
+  $resource '/professors.json'
+]

@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
 
-    
-    
     #add_breadcrumb "title", :my_path, :title => "course.name"
- 
+  layout "page-application"
   def index
     add_breadcrumb "Home", :root_path
   end

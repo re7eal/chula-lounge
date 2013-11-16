@@ -7,9 +7,9 @@ Array.prototype.removeIf = function(callback) {
     }
 };
 
-App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach', 
+App.controller('PageCourseRegister', ['$scope', '$http', 'Professor', 
 	
-	function($scope, $http, Professor, Teach) {
+	function($scope, $http, Professor) {
 
 	var today = new Date();
 	$scope.years = [];
@@ -49,7 +49,7 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach',
 	$scope.professor_list = Professor.query();
 	$scope.profs = $scope.professor_list;
  	
-	$http({method:'GET', url: '/faculties'}).
+	$http({method:'GET', url: '/faculties.json'}).
 		success(function(data){
 			$scope.faculties = data;		
 		}
@@ -163,7 +163,8 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor','Teach',
 	$scope.save = function() {
 		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
 		delete_teach_professor($scope.data.teaches);
-		$http({method:"POST", url:'/save/courses', data: $scope.data}).success(function(data) {
+		console.log($scope.data);
+		$http({method:"POST", url:'/save/courses.json', data: $scope.data}).success(function(data) {
 			console.log(data);
 		}).error(function(data) {
 			console.log(data);

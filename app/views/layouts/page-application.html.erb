@@ -20,19 +20,11 @@
       </nav>
     </div>
     <div id="main" role="main">
-      <div class="container" ng-controller="ApplicationController">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
+      <div ng-controller="ApplicationController">
               <%= render 'layouts/messages' %>
               <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+      </div>
+    </div>
     <%= render 'layouts/login' %>
   </body>
 </html>

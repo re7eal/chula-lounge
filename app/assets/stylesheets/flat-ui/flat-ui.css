@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
-@font-face {
+/*@font-face {
   font-family: "Flat-UI-Icons";
   src: url("../Flat-UI-Icons.eot");
   src: url("../Flat-UI-Icons.eot?#iefix") format("embedded-opentype"), url("../Flat-UI-Icons.woff") format("woff"), url("../Flat-UI-Icons.ttf") format("truetype"), url("../Flat-UI-Icons.svg#Flat-UI-Icons") format("svg");
@@ -7,7 +7,7 @@
   font-style: normal;
 }
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
+/*[data-icon]:before {
   font-family: 'Flat-UI-Icons';
   content: attr(data-icon);
   speak: none;
@@ -15,7 +15,7 @@
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
-}
+}*/
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
