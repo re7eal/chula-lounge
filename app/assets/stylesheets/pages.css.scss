@@ -120,6 +120,7 @@ ul {
     border-top: 1px solid #ecf0f1;
     border-bottom: 1px solid #ecf0f1;
     .fui-arrow-right {
+      color: #D13200;
       font-size: 18px;
       line-height: 35px;
     }
@@ -158,6 +159,24 @@ ul {
 
 #course .fui-arrow-right {
   line-height: 35px;
+}
+#coursef {
+  list-style: none;
+  li {
+    border-top: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  cs {
+    font-size: 17px;
+    font-weight: 400;
+    color: $red;
+    padding: 19px 150px 19px 0px;
+
+  }
+  a:hover {
+    background-color:transparent;
+    color:#444;
+  }
 }
 
 /* Footer */
@@ -257,7 +276,7 @@ input[type="search"]::-webkit-input-placeholder{
 
 #course {
   li {
-    padding: 17px 16px 17px 16px;
+    padding: 19px 16px 18px 16px;
   }
 }
 
