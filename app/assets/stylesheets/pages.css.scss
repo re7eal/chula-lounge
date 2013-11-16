@@ -542,3 +542,26 @@ input[type="search"]::-webkit-input-placeholder{
     color: #798795;
     font-size: 16px
   }
+  #ratingModal{
+
+  }
+  #ratingModalButton{
+    margin-top: 10px;
+    padding: 9px 232.7px 10px;
+    background-color: #A22700;
+    &:hover{
+      background-color: #D13200;
+    }
+    color: white;
+    text-shadow: none;
+
+  }
+  #ratingSlider{
+    background-color: #D13200;
+  }
+  #fModalBtn{
+   background-color: #A22700;
+    &:hover{
+      background-color: #D13200;
+    }
+  }
