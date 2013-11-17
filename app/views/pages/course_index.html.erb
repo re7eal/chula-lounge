@@ -8,7 +8,7 @@
 				<div class="span4 rating-box">{{rating.grade_rating}}</div>
 			  </div>
 			  <!-- Button trigger modal -->
-<button class="btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
+<button class="span12 btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
   Click to rate 
 </button>
 			</div>
@@ -37,15 +37,12 @@
 					<div ng-repeat="review in top_comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
-<<<<<<< HEAD
 							<ul class="nav pull-left">
 								<li class="like" ng-click="like(review)" ng-class="{active:review.like}"><a><span class="badge">{{review.likes}}</span> Like</a></li>
 								<li class="dislike" ng-click="dislike(review)" ng-class="{active:review.dislike}"><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
-=======
 							<ul class="nav pull-left" id="like">
 								<li><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
 								<li><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
->>>>>>> e41826aaf7d2536f399bda7697c8d7a7bd791daa
 							</ul>
 							<div class="pull-right author">{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
 						</div>
@@ -68,15 +65,12 @@
 					<div ng-repeat="review in comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
-<<<<<<< HEAD
 							<ul class="nav pull-left">
 								<li class="like" ng-click="like(review)" ng-class="{active:review.like}"><a><span class="badge">{{review.likes}}</span> Like</a></li>
 								<li class="dislike" ng-click="dislike(review)" ng-class="{active:review.dislike}"><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
-=======
 							<ul class="nav pull-left" id="like">
 								<li><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
 								<li><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
->>>>>>> e41826aaf7d2536f399bda7697c8d7a7bd791daa
 							</ul>
 							<div class="pull-right author">
 							{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
@@ -84,16 +78,12 @@
 					</div>
 				</div>
 				</div>
-<<<<<<< HEAD
 				<div class="modal-footer">
 				  <% if user_signed_in? %>
-=======
 				<div class="modal-footer" id="whiteFooter">
->>>>>>> e41826aaf7d2536f399bda7697c8d7a7bd791daa
 					<div>
 						<textarea ng-enter="review()" id="review-post" class="span12 pull-left"></textarea>
 					</div>
-<<<<<<< HEAD
 
 					<!-- <div class="pull-left dropdown">
 						<ul class="nav">

@@ -20,6 +20,10 @@ class Course < ActiveRecord::Base
       	]
       	)
     end
+    accepts_nested_attributes_for :curriculums
+    accepts_nested_attributes_for :teaches
+    accepts_nested_attributes_for :professors
+
 
     validates :teaches, :presence => true
     validates :curriculums, :presence => true

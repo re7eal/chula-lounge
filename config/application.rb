@@ -10,6 +10,7 @@ module ChulaLounge
   class Application < Rails::Application
 
     # don't generate RSpec tests for views and helpers
+    config.action_controller.permit_all_parameters = true
     config.generators do |g|
       g.test_framework :rspec
       

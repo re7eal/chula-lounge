@@ -62,12 +62,12 @@
 				  			</select>
 			  			</div>
 			  			<div>
-			  				<select ng-model="teach.professor" ng-options="p.name + ' ' + p.last_name for p in profs" >
+			  				<select ng-model="teach.professor" ng-options="p.name + ' ' + p.last_name for p in profs(teach.professor)" >
 				  				<option value="">Choose Professor</option>
 				  			</select>
 			  			</div>
 			  			<div ng-repeat="professor in teach.professors">
-				  			<select ng-model="teach.professors[$index]" ng-options="p.name + ' ' + p.last_name for p in profs" >
+				  			<select ng-model="teach.professors[$index]" ng-options="p.name + ' ' + p.last_name for p in profs(professor)" >
 				  				<option value="">Choose Professor</option>
 				  			</select>
 				  			<button type="button" ng-click="removeProf(professor)" class="btn btn-small">-</button>
@@ -117,7 +117,7 @@
 	</div>
 	<div class="row-fluid">
 		<button ng-click="save()" type="button" style="float:right;margin-left:3px; margin-top:10px" class="btn">Submit</button>
-		<a class="btn" href=".." style="float:right; margin-top:10px; margin-left:3px; color:white">Cancel</a>		
+		<a class="btn" ng-click="cancel()" style="float:right; margin-top:10px; margin-left:3px; color:white">Cancel</a>		
 	</div>
 	<div class="row-fluid">
 		<p id="error" class="dialog" style="text-align:left; margin-top:5px; padding-left:18px"></p>

@@ -586,8 +586,8 @@ input[type="search"]::-webkit-input-placeholder{
   }
   #ratingModalButton{
     margin-top: 10px;
-    padding: 9px 256.7px 10px;
     background-color: #A22700;
+    margin-left:0;
     &:hover{
       background-color: #D13200;
     }

@@ -7,8 +7,8 @@ Array.prototype.removeIf = function(callback) {
     }
 };
 
-App.controller('PageCourseRegister', ['$scope', '$http', 'Professor', 
-	function($scope, $http, Professor) {
+App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor', 
+	function($scope,$window, $http, Professor) {
 	
 	$('#error').hide();
 	var today = new Date();
@@ -46,8 +46,19 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 	}; 
 	$scope.description = "";
 	$scope.professor_list = Professor.query();
-	$scope.profs = $scope.professor_list;
- 	
+	$scope.profs = function(prof) {
+		var profs = $scope.professor_list.concat([]);
+		var array = $scope.teach.professors.concat($scope.teach.professor);
+		
+		for(var i=0;i< array.length;i++){
+				var index = profs.indexOf(array[i]);
+				
+				if(array[i] != prof && index != -1){
+					profs.splice(index,1);
+				}
+		}
+		return profs;
+ 	}
 	$http({method:'GET', url: '/faculties.json'}).
 		success(function(data){
 			$scope.faculties = data;		
@@ -72,6 +83,7 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 
 	$scope.addProf = function() {
 		$scope.teach.professors.push({});
+
 	}
 
 	$scope.addTeach = function() {
@@ -83,9 +95,15 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 				return false;
 			return true;
 		});
+		
+
 		var index = $scope.years.indexOf($scope.teach.year);
 
-		if(index > -1) $scope.years.splice(index, 1);
+		if(index > -1) 
+			$scope.years.splice(index, 1);
+
+		if($scope.teach.professors.length <= 0) 
+			return;
 
 		$scope.data.teaches.push($scope.teach);
 		$scope.teach = {
@@ -150,7 +168,7 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 			for(var i =0; i< array.length;i++){
 				res.push(array[i].curriculum);
 			}
-			return res
+			return res;
 	}
 
 	var delete_teach_professor = function (array){
@@ -159,23 +177,63 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 		}
 		return array;
 	}
+
+	var adjust_professors = function(array) {
+		var res= [];
+		for(var i=0;i<array.length;i++){
+			res.push({
+				id: array[i].id
+			})
+		}
+		return res;
+	}
+
+	var adjust_teaches = function(array){
+		var res = [];
+		for(var i=0;i < array.length;i++){
+			res.push({
+				professors: adjust_professors(array[i].professors),
+				year: array[i].year
+			});
+		}
+		return res;
+	}
+
+	var adjust_curriculums = function(array){
+		var res = [];
+		for(var i=0;i < array.length;i++){
+			res.push({
+				id: array[i].id
+			});
+		}
+		return res;
+	}
 	$scope.save = function() {
-		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
+		var c = flatten_array_curr($scope.data.curriculums);
 		delete_teach_professor($scope.data.teaches);
-		
-		$http({method:"POST", url:'/save/courses.json', data: $scope.data}).success(function(data) {
+
+		var send = {
+			course : $scope.data.course
+		}
+		delete send.course.curriculums;
+		send.teaches = adjust_teaches($scope.data.teaches);
+		send.curriculums = adjust_curriculums(c);
+		$http({method:"POST", url:'/save/courses.json', data: send}).success(function(data) {
 			console.log(data);
+			$window.location.href="/pages/nav/" + c[0].id + "/course/" + data.id;
 		}).error(function(data) {
-			console.log(data);
 			var msg = "";
 			angular.forEach(data, function(value, key){
 				for(var i=0;i<value.length;i++){
-					msg += "course " + key + " " + value[i] + "\n";
+					msg += "course " + key + " " + value[i] + "<br/>";
 				}
 			});
-			$('#error').html(msg.replace("\n", "<br/>"));
+			$('#error').html(msg);
 			$('#error').show();
 		});
+	}
+	$scope.cancel = function() {
+		$window.location.href="courses/";
 	}
 }]);
 

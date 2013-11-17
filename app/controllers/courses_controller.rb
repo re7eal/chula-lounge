@@ -78,9 +78,23 @@ def index
   # POST
   def register
     @course = Course.new(course_params)
+      ts = []
+      params2[:teaches].each do |tc|
+        tc[:professors].each do |p|
+          t = Teach.new({:year=> tc[:year]})
+          t.professor = Professor.find(p[:id])
+          ts.push(t)
+        end
+      end
+      cs = []
+      params2[:curriculums].each do |c|
+        cs.push(Curriculum.find(c[:id]))
+      end
+      @course.teaches = ts
+      @course.curriculums = cs
 
     respond_to do |format|
-      if @course.valid?
+      if @course.save
         format.json { render json: @course}
       else
         format.json { render json: @course.errors, status: :unprocessable_entity }
@@ -121,6 +135,9 @@ def index
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:title, :number, :description, :faculty, :year)
+      params.require(:course).permit!
+    end
+    def params2
+      params.permit!
     end
 end
