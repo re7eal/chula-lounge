@@ -5,7 +5,7 @@ class Comment < ActiveRecord::Base
 	has_many :dislikes
 
 	validates_associated :user, :course
-	
+	validates :user, :presence => true
 	validates :content, length: {minimum: 1} ,allow_blank: false
 	validates :user, length: {minimum: 1} ,allow_blank: false
 	#validates :course, length: {is: 7}, numericality: {only_integer: true}, allow_blank: false

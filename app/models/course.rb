@@ -21,9 +21,8 @@ class Course < ActiveRecord::Base
       	)
     end
 
-    
-    
-    
+    validates :teaches, :presence => true
+    validates :curriculums, :presence => true
     validates :title, length: {minimum: 1} ,allow_blank: false
     validates :number, length: {is: 7}, numericality: {only_integer: true}, allow_blank: false
     validates :description, length: {minimum: 1} ,allow_blank: false
