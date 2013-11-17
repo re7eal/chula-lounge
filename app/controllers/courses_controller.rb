@@ -24,9 +24,9 @@ def index
 
     @comments = @course.comments
     @users = []
+
     @comments.each do |i|
-      c = Comment.find(i.id)
-      @users.push(c.user)
+      c = Comment.find(i.id)   
     end
   end
 

@@ -23,8 +23,8 @@
         	</li>
         </ul>
     </div>
-    <div id="course" id="coursef" class="span4" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
-      	<ul class="test" id="coursef" ng-show="curriculumSelected != null && yearSelected != null">
+    <div id="course" class="span4 coursef" ng-class="{column3 : curriculumSelected != null && yearSelected != null, column2:  yearSelected == null && curriculumSelected != null, column1 : curriculumSelected == null && yearSelected == null}">
+      	<ul class="test coursef" ng-show="curriculumSelected != null && yearSelected != null">
       		<li ng-repeat="course in courses">
       		  <a class="content" ng-href="{{id}}/course/{{course.id}}">
       		    <cs><span class="cnum">{{course.number}} : </span> {{course.title}}</cs>

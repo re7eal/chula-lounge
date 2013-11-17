@@ -21,6 +21,48 @@ class CommentsController < ApplicationController
   def edit
   end
 
+  def like
+    @comment = Comment.find(params[:comment_id])
+    if user_signed_in?
+      if @comment.likes.exists? ({:user_id => current_user.id})
+        @like = @comment.likes.find_by_user_id(current_user.id)
+        @like.destroy
+        render json: @comment.likes.count, status: 203
+      else
+        @like = Like.new({:user_id => current_user.id, :comment_id => @comment.id})
+
+          if @like.save
+            render json: @comment.likes.count, status: :accepted 
+          else
+            render json: @like.errors, status: :unprocessable_entity
+          end
+        end
+    else
+      head :bad_request
+    end
+  end
+
+  def dislike
+    @comment = Comment.find(params[:comment_id])
+    if user_signed_in?
+      if @comment.dislikes.exists? ({:user_id => current_user.id})
+        @dislike = @comment.dislikes.find_by_user_id(current_user.id)
+        @dislike.destroy
+        render json: @comment.dislikes.count, status: 203
+      else
+        @dislike = Dislike.new({:user_id => current_user.id, :comment_id => @comment.id})
+
+          if @dislike.save
+            render json: @comment.dislikes.count, status: :accepted 
+          else
+            render json: @dislike.errors, status: :unprocessable_entity
+          end
+        end
+    else
+      head :bad_request
+    end
+  end
+
   # POST /comments
   # POST /comments.json
   def create
