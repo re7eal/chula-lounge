@@ -8,16 +8,15 @@ Array.prototype.removeIf = function(callback) {
 };
 
 App.controller('PageCourseRegister', ['$scope', '$http', 'Professor', 
-	
 	function($scope, $http, Professor) {
-
+	
+	$('#error').hide();
 	var today = new Date();
 	$scope.years = [];
 	
 	for(var i = 0; i < 10;i++){
 		$scope.years.push(today.getFullYear()-i);
 	}
-
 	$scope.ayears = [1,2,3,4];
 
 	$scope.editCourseMode = false;
@@ -163,10 +162,19 @@ App.controller('PageCourseRegister', ['$scope', '$http', 'Professor',
 	$scope.save = function() {
 		$scope.data.curriculums = flatten_array_curr($scope.data.curriculums);
 		delete_teach_professor($scope.data.teaches);
+		
 		$http({method:"POST", url:'/save/courses.json', data: $scope.data}).success(function(data) {
 			console.log(data);
 		}).error(function(data) {
 			console.log(data);
+			var msg = "";
+			angular.forEach(data, function(value, key){
+				for(var i=0;i<value.length;i++){
+					msg += "course " + key + " " + value[i] + "\n";
+				}
+			});
+			$('#error').html(msg.replace("\n", "<br/>"));
+			$('#error').show();
 		});
 	}
 }]);
