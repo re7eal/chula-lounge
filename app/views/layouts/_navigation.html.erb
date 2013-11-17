@@ -2,7 +2,7 @@
 <%= link_to "Chula Lounge", root_path, :class => 'brand' %>
 <div class="nav-collapse collapse" id="nav-collapse-03">
 	<ul class="nav">
-		<li><a href="#fakelink"> Wikis </a></li>
+		<li><%= link_to 'Course Reviews', pages_path %></li>
 		<li class="<%= 'active' if trade_pages %>"><%= link_to 'Trades', trades_path %>
 			<ul>
 				<li class="<%= 'active' if current_page?(my_trades_path) %>"><%= link_to 'My Trades', my_trades_path %></li>

@@ -29,5 +29,6 @@ class PagesController < ApplicationController
   end
   
   def course_register
+    @id = params[:id]
   end
 end

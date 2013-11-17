@@ -11,6 +11,7 @@ App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor',
 	function($scope,$window, $http, Professor) {
 	
 	$('#error').hide();
+
 	var today = new Date();
 	$scope.years = [];
 	
@@ -23,6 +24,10 @@ App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor',
 	$scope.editDescMode = false;
 	$scope.editMetaMode = false;
 
+
+	$scope.init = function(id) {
+		console.log($scope.data);
+	}
 	$scope.data = {
 		course : {
 			title: "Course Title",
@@ -44,6 +49,7 @@ App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor',
 		year: 1,
 		curriculums: []
 	}; 
+
 	$scope.description = "";
 	$scope.professor_list = Professor.query();
 	$scope.profs = function(prof) {
@@ -220,7 +226,7 @@ App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor',
 		send.curriculums = adjust_curriculums(c);
 		$http({method:"POST", url:'/save/courses.json', data: send}).success(function(data) {
 			console.log(data);
-			$window.location.href="/pages/nav/" + c[0].id + "/course/" + data.id;
+			$window.location.href="../pages/nav/" + c[0].id + "/course/" + data.id;
 		}).error(function(data) {
 			var msg = "";
 			angular.forEach(data, function(value, key){
@@ -233,7 +239,7 @@ App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor',
 		});
 	}
 	$scope.cancel = function() {
-		$window.location.href="courses/";
+		$window.location.href="../../courses";
 	}
 }]);
 
