@@ -1,11 +1,11 @@
-<h1>Listing professors</h1>
-
-<table>
+<h3>Professors</h3>
+<div class="span8">
+<table class="table table-condensed">
   <thead>
     <tr>
       <th>Name</th>
       <th>Last name</th>
-      <th></th>
+      <th>Registered</th>
       <th></th>
       <th></th>
     </tr>
@@ -16,9 +16,12 @@
       <tr>
         <td><%= professor.name %></td>
         <td><%= professor.last_name %></td>
-        <td><%= link_to 'Show', professor %></td>
-        <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
-        <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= professor.created_at.to_date %></td>
+        <td>
+          <a href= "professors/<%=professor.id %>/edit" class="btn btn-mini" type="button">Edit</a>
+        </td>
+        <td><%= button_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +29,5 @@
 
 <br>
 
-<%= link_to 'New Professor', new_professor_path %>
+<a  href= "/professors/new" class="btn btn-mini" type="button">New Professor</a>
+

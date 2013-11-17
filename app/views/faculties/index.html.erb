@@ -1,11 +1,11 @@
-<h1>Listing faculties</h1>
-
-<table>
+<h3>Faculties</h3>
+<div class="span8">
+<table class="table table-condensed">
   <thead>
     <tr>
       <th>Name</th>
       <th>Abbreviation</th>
-      <th></th>
+      <th>Registered</th>
       <th></th>
       <th></th>
     </tr>
@@ -16,9 +16,12 @@
       <tr>
         <td><%= faculty.name %></td>
         <td><%= faculty.abbreviation %></td>
-        <td><%= link_to 'Show', faculty %></td>
-        <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>
-        <td><%= link_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= faculty.created_at.to_date %></td>
+        <td>
+          <a href= "faculties/<%=faculty.id %>/edit" class="btn btn-mini" type="button">Edit</a>
+        </td>
+        <td><%= button_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Faculty', new_faculty_path %>
+<a  href= "/faculties/new" class="btn btn-mini" type="button">New Faculty</a>
