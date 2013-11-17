@@ -5,7 +5,6 @@ ChulaLounge::Application.routes.draw do
   resources :have_courses
 
   resources :trade_messages
-
   resources :trades
   resources :dislikes
   resources :likes
@@ -13,10 +12,19 @@ ChulaLounge::Application.routes.draw do
   resources :faculties
   resources :curriculums
   resources :teaches
-  resources :courses
+  resources :courses do
+    resources :comments do
+      resources :likes
+      resources :dislikes
+    end
+  end
   resources :ratings
-  resources :comments
+  resources :comments do
+    post 'like', to: 'comments#like'
+    post 'dislike', to: 'comments#dislike'
+  end
   resources :professors
+
   get 'my_trades', to: 'trades#my_trades'
 
   get 'search_trades', to: 'trades#search'

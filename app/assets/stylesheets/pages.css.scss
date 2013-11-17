@@ -519,13 +519,33 @@ input[type="search"]::-webkit-input-placeholder{
 				line-height:135%;
 			}
 
+
 			.footer {
 			  width:100%;
 			  ul {
 			  	vertical-align: middle;
 			  }
+       
 			  li {
 			  	float:left;
+           &.like.active {
+            a {
+              background-color:#16a085;
+              color:white;
+            }
+            .badge {
+              color:white;
+            }
+          }
+          &.dislike.active {
+            a {
+              background-color: #e74c3c;
+              color:white;
+            }
+            .badge {
+              color:white;
+            }
+          }
 			  	a {
 			  		display:block;
 			  		border-radius:5px;

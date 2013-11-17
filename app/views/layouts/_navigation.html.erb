@@ -35,7 +35,7 @@
 		</a>
 			<ul class="dropdown-menu">
 				<li><%= link_to 'Edit Account', edit_user_registration_path %></li>
-				<li><a href="#fakelink">Profile Settings</a></li>
+				<li><a href="#fakelink">Profie Settings</a></li>
 				<% if current_user.has_role? :admin %>
 				<li class="divider"></li>
 				<li><%= link_to 'Admin', users_path %></li> <% end %>
