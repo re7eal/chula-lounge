@@ -9,7 +9,7 @@
 			  </div>
 			  <!-- Button trigger modal -->
 <button class="btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
-  Launch demo modal
+  Click to rate 
 </button>
 			</div>
 
@@ -24,7 +24,7 @@
 		</div>
 		<div class="span8">
 			<div class="row-fluid">
-				<div class="span12 box">
+				<div class="span12 box" id="red">
 					<h4>{{ course.number }} : {{ course.title }}</h6>
 					<p id="description">
 						{{course.description}}
@@ -37,9 +37,9 @@
 					<div ng-repeat="review in top_comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
-							<ul class="nav pull-left">
-								<li><a><span class="badge">{{review.likes}}</span> Like</a></li>
-								<li><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
+							<ul class="nav pull-left" id="like">
+								<li><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
+								<li><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
 							</ul>
 							<div class="pull-right author">{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
 						</div>
@@ -54,17 +54,17 @@
 	<div id="reviewModal" class="modal fade hide" role="dialog" tabindex="-1" aria-labelledby="reviewModel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-header" id="whiteFooter">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-         			 <h4 class="modal-title">Course Review</h4>
+         			 <h4 class="modal-title" id="red">Course Review</h4>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" id="whiteFooter">
 					<div ng-repeat="review in comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
-							<ul class="nav pull-left">
-								<li><a><span class="badge">{{review.likes}}</span> Like</a></li>
-								<li><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
+							<ul class="nav pull-left" id="like">
+								<li><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
+								<li><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
 							</ul>
 							<div class="pull-right author">
 							{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
@@ -72,14 +72,14 @@
 					</div>
 				</div>
 				</div>
-				<div class="modal-footer">
+				<div class="modal-footer" id="whiteFooter">
 					<div>
 						<textarea id="review-post" class="span12 pull-left"></textarea>
 					</div>
 					<div class="pull-left dropdown">
-						<ul class="nav">
-							<li><a>Year</a></li>
-							<li><a>Anon</a></li>
+						<ul class="nav" id="like">
+							<li><lk><a><lk>Year</lk></a></lk></li>
+							<li><lk><a><lk>Anon</lk></a></lk></li>
 						</ul>
 						<ul class="dropdown-menu dropdown-inverse" role="menu">
 							<li role="presentation">
@@ -108,17 +108,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Ratings</h4>
       </div>
+
       <div class="modal-body">
         <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
             <div class="ui-slider-segment"></div>
             <div class="ui-slider-segment"></div>
             <div class="ui-slider-segment"></div>
       </div>
-
-      <div class="modal-footer">
-        <button type="button" id="fModalBtn" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer" id="whiteFooter">
+        <button type="button" id="fModalBtn" class="btn btn-primary">Submit</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
