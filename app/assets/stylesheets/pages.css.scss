@@ -160,7 +160,7 @@ ul {
 #course .fui-arrow-right {
   line-height: 35px;
 }
-#coursef {
+.coursef {
   list-style: none;
   li {
     border-top: 1px solid #ecf0f1;
@@ -586,7 +586,7 @@ input[type="search"]::-webkit-input-placeholder{
   }
   #ratingModalButton{
     margin-top: 10px;
-    padding: 9px 232.7px 10px;
+    padding: 9px 256.7px 10px;
     background-color: #A22700;
     &:hover{
       background-color: #D13200;
@@ -603,4 +603,32 @@ input[type="search"]::-webkit-input-placeholder{
     &:hover{
       background-color: #D13200;
     }
+  }
+  #like {
+    color:#A22700;
+    lk {
+      color:#A22700;
+      font-size: 15px;
+
+    }
+    lk:hover {
+  color:#D13200;
+  text-decoration: none;
+    }
+  }
+  #red {
+    color:#A22700;
+  }
+  #redHover {
+    color:#A22700;
+
+    &:hover {
+      color:#D13200;
+    }
+  }
+  #redModal {
+    border-bottom: 1px solid #A22700;
+  }
+  #whiteFooter{
+    background-color: white;
   }
