@@ -1,14 +1,14 @@
-<h1>Listing courses</h1>
+<h3>Courses</h3>
+<div class="span8">
+<table class="table table-condensed">
 
-<table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Number</th>
       <th>Description</th>
-      <th>Faculty</th>
       <th>Academic year</th>
-      <th></th>
+      <th>Registered</th>
       <th></th>
       <th></th>
     </tr>
@@ -21,9 +21,12 @@
         <td><%= course.number %></td>
         <td><%= course.description %></td>
         <td><%= course.year %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= course.created_at.to_date %></td>
+         <td>
+          <a href= ".." class="btn btn-mini" type="button">Edit</a>
+        </td>
+        <td><%= button_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<a  href= "/courses/new" class="btn btn-mini" type="button">New Course</a>
