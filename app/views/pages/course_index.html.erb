@@ -1,4 +1,4 @@
-<div class="container-fluid course-index" ng-controller="PageCourseIndex" ng-init="init(<%=@id%>,<% if user_signed_in? %> <%= current_user.id%>) <%end%>">
+<div class="container-fluid course-index" ng-controller="PageCourseIndex" ng-init="init(<%=@id%><% if user_signed_in? %> <%= ',' %> <%= current_user.id %><%end%>)">
 	<div class="row-fluid">
 		<div class="span4">
 			<div class="row-fluid">
@@ -37,12 +37,9 @@
 					<div ng-repeat="review in top_comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
-							<ul class="nav pull-left">
-								<li class="like" ng-click="like(review)" ng-class="{active:review.like}"><a><span class="badge">{{review.likes}}</span> Like</a></li>
-								<li class="dislike" ng-click="dislike(review)" ng-class="{active:review.dislike}"><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
-							<ul class="nav pull-left" id="like">
-								<li><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
-								<li><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
+							<ul class="nav pull-left likebox">
+								<li class="like" ng-click="like(review)" ng-class="{active:review.like}"><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
+								<li class="dislike" ng-click="dislike(review)" ng-class="{active:review.dislike}"><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
 							</ul>
 							<div class="pull-right author">{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
 						</div>
@@ -65,12 +62,9 @@
 					<div ng-repeat="review in comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
-							<ul class="nav pull-left">
-								<li class="like" ng-click="like(review)" ng-class="{active:review.like}"><a><span class="badge">{{review.likes}}</span> Like</a></li>
-								<li class="dislike" ng-click="dislike(review)" ng-class="{active:review.dislike}"><a><span class="badge">{{review.dislikes}}</span> Dislike</a></li>
-							<ul class="nav pull-left" id="like">
-								<li><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
-								<li><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
+							<ul class="nav pull-left likebox">
+								<li class="like" ng-click="like(review)" ng-class="{active:review.like}"><lk><a><lk><span class="badge">{{review.likes}}</span> Like</lk></a></lk></li>
+								<li class="dislike" ng-click="dislike(review)" ng-class="{active:review.dislike}"><lk><a><lk><span class="badge">{{review.dislikes}}</span> Dislike</lk></a></lk></li>
 							</ul>
 							<div class="pull-right author">
 							{{review.created_at}}&nbsp;&nbsp;&nbsp; By {{review.name}}</div>
@@ -78,7 +72,6 @@
 					</div>
 				</div>
 				</div>
-				<div class="modal-footer">
 				  <% if user_signed_in? %>
 				<div class="modal-footer" id="whiteFooter">
 					<div>
@@ -94,21 +87,18 @@
 								<option value="2013">2010</option>
 							</select></li>
 							<li><a>Anon</a></li>
-=======
 					<div class="pull-left dropdown">
 						<ul class="nav" id="like">
 							<li><lk><a><lk>Year</lk></a></lk></li>
 							<li><lk><a><lk>Anon</lk></a></lk></li>
->>>>>>> e41826aaf7d2536f399bda7697c8d7a7bd791daa
 						</ul>
 					</div> -->
 					<div class="pull-right">
 						<button ng-click="review()" class="btn btn-default">Submit</button>
 					</div>
 				  <% else %>
-				    <div class="pull-left">Please sign-in to comment</div>
+				    <div class="pull-left" style="padding:30px">Please sign-in to comment</div>
 				  <% end %>
-				</div>
 			</div>	
 		</div>
 	</div>

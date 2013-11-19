@@ -138,7 +138,7 @@ App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
 					{y:2,s:2},
 					{y:3,s:1},
 					{y:3,s:2},
-					{y:4,s:1},
+						{y:4,s:1},
 					{y:4,s:2}
 				];
 

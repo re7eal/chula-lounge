@@ -529,21 +529,19 @@ input[type="search"]::-webkit-input-placeholder{
 			  li {
 			  	float:left;
            &.like.active {
-            a {
-              background-color:#16a085;
-              color:white;
+            lk {
+              font-weight:bold;
             }
             .badge {
-              color:white;
+              font-weight:bold;
             }
           }
           &.dislike.active {
-            a {
-              background-color: #e74c3c;
-              color:white;
+            lk {
+              font-weight:bold;
             }
             .badge {
-              color:white;
+              font-weight:bold;
             }
           }
 			  	a {
@@ -604,7 +602,7 @@ input[type="search"]::-webkit-input-placeholder{
       background-color: #D13200;
     }
   }
-  #like {
+  .likebox {
     color:#A22700;
     lk {
       color:#A22700;

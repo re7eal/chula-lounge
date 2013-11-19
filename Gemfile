@@ -47,3 +47,4 @@ gem 'angularjs-rails'
 gem "breadcrumbs_on_rails"
 
 gem 'rails_12factor', group: :production
+

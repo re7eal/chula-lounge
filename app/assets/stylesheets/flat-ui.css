@@ -5810,7 +5810,7 @@ input.search-query {
 }
 .modal-backdrop {
   z-index: 1040;
-  background-color: #1B1B1B;
+  background-color: #243342;
 }
 .modal-backdrop.fade {
   opacity: 0;
