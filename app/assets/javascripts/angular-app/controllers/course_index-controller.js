@@ -1,14 +1,40 @@
 App.controller('PageCourseIndex', ['$scope', '$http', function($scope, $http){
 
-	var s = $("#know-rating-slider");
-if (s.length > 0) {
-  s.slider({
+	var knowSlider = $("#know-rating-slider");
+if (knowSlider.length > 0) {
+  knowSlider.slider({
     min: 1,
     max: 10,
     value: 6,
     orientation: "horizontal",
     range: "min"
-  }).addSliderSegments(s.slider("option").max);
+
+  }).addSliderSegments(knowSlider.slider("option").max);
+}
+
+var gradSlider = $("#grad-rating-slider");
+if (gradSlider.length > 0) {
+  gradSlider.slider({
+    min: 1,
+    max: 10,
+    value: 6,
+    orientation: "horizontal",
+    range: "min"
+
+  }).addSliderSegments(gradSlider.slider("option").max);
+}
+
+
+var textSlider = $("#text-rating-slider");
+if (textSlider.length > 0) {
+  textSlider.slider({
+    min: 1,
+    max: 10,
+    value: 6,
+    orientation: "horizontal",
+    range: "min"
+
+  }).addSliderSegments(textSlider.slider("option").max);
 }
 
 // Add segments to a slider
@@ -20,45 +46,23 @@ $.fn.addSliderSegments = function (amount) {
   });
 };
 
-var s = $("#grad-rating-slider");
-if (s.length > 0) {
-  s.slider({
-    min: 1,
-    max: 10,
-    value: 6,
-    orientation: "horizontal",
-    range: "min"
-  }).addSliderSegments(s.slider("option").max);
+$scope.rate = function() {
+	var knowRating = knowSlider.slider("value");
+	var gradRating = gradSlider.slider("value");
+	var textRating = textSlider.slider("value");
+	var ratings = [
+$("#know-rating-slider").slider("option","value"
+),
+$("#grad-rating-slider").slider("option","value"
+),
+$("#text-rating-slider").slider("option","value"
+)
+]
+console.log(ratings);
+console.log(knowRating);
+console.log(gradRating);
+console.log(textRating);
 }
-
-// Add segments to a slider
-$.fn.addSliderSegments = function (amount) {
-  return this.each(function () {
-    var segmentGap = 100 / (amount - 1) + "%"
-      , segment = "<div class='ui-slider-segment' style='margin-left: " + segmentGap + ";'></div>";
-    $(this).prepend(segment.repeat(amount - 2));
-  });
-};
-
-var s = $("#text-rating-slider");
-if (s.length > 0) {
-  s.slider({
-    min: 1,
-    max: 10,
-    value: 6,
-    orientation: "horizontal",
-    range: "min"
-  }).addSliderSegments(s.slider("option").max);
-}
-
-// Add segments to a slider
-$.fn.addSliderSegments = function (amount) {
-  return this.each(function () {
-    var segmentGap = 100 / (amount - 1) + "%"
-      , segment = "<div class='ui-slider-segment' style='margin-left: " + segmentGap + ";'></div>";
-    $(this).prepend(segment.repeat(amount - 2));
-  });
-};
 
 	var focus_duration = 800;
 	

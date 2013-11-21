@@ -8,7 +8,7 @@
 				<div class="span4 rating-box">{{rating.grade_rating}}</div>
 			  </div>
 			  <!-- Button trigger modal -->
-<button class="span12 btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
+<button class="span12 btn btn-lg" id="ratingModalButton" ng-click="rate()" data-toggle="modal" data-target="#ratingModal">
   Click to rate !
 </button>
 			</div>
@@ -124,7 +124,7 @@
 
        </div>
       <div class="modal-footer" id="whiteFooter">
-        <button type="button" id="fModalBtn" class="btn btn-primary">Submit</button>
+        <button type="button" id="fModalBtn"  class="btn btn-primary">Submit</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

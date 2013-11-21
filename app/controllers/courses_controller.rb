@@ -1,6 +1,12 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
+def rating
+  if user_signed_in?
+    
+    else
+  head :bad_request
+  end
 
 # GET /courses
   # GET /courses.json
