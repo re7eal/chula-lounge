@@ -5,10 +5,9 @@ if (knowSlider.length > 0) {
   knowSlider.slider({
     min: 1,
     max: 10,
-    value: 6,
+    value: 3,
     orientation: "horizontal",
-    range: "min"
-
+    range: "min",
   }).addSliderSegments(knowSlider.slider("option").max);
 }
 
@@ -17,10 +16,9 @@ if (gradSlider.length > 0) {
   gradSlider.slider({
     min: 1,
     max: 10,
-    value: 6,
+    value: 3,
     orientation: "horizontal",
     range: "min"
-
   }).addSliderSegments(gradSlider.slider("option").max);
 }
 
@@ -30,10 +28,9 @@ if (textSlider.length > 0) {
   textSlider.slider({
     min: 1,
     max: 10,
-    value: 6,
+    value: 3,
     orientation: "horizontal",
     range: "min"
-
   }).addSliderSegments(textSlider.slider("option").max);
 }
 
@@ -51,11 +48,11 @@ $scope.rate = function() {
 	var gradRating = gradSlider.slider("value");
 	var textRating = textSlider.slider("value");
 	var ratings = [
-$("#know-rating-slider").slider("option","value"
+knowSlider.slider("option","value"
 ),
-$("#grad-rating-slider").slider("option","value"
+gradSlider.slider("option","value"
 ),
-$("#text-rating-slider").slider("option","value"
+textSlider.slider("option","value"
 )
 ]
 console.log(ratings);

@@ -8,7 +8,7 @@
 				<div class="span4 rating-box">{{rating.grade_rating}}</div>
 			  </div>
 			  <!-- Button trigger modal -->
-<button class="span12 btn btn-lg" id="ratingModalButton" ng-click="rate()" data-toggle="modal" data-target="#ratingModal">
+<button class="span12 btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
   Click to rate !
 </button>
 			</div>
@@ -102,10 +102,9 @@
 			</div>	
 		</div>
 	</div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<!-- Modal -->
+<div class="modal fade" id="ratingModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" id="whiteBody">
@@ -124,8 +123,13 @@
 
        </div>
       <div class="modal-footer" id="whiteFooter">
-        <button type="button" id="fModalBtn"  class="btn btn-primary">Submit</button>
+        <button  id="fModalBtn"  class="btn btn-primary" ng-click="rate()" data-toggle="modal" data-target="#ratingModal">Submit</button>
+        
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+</div>
+
+
