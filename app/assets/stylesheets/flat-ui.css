@@ -3345,7 +3345,7 @@ input.search-query {
   filter: unquote("progid:DXImageTransform.Microsoft.gradient(enabled = false)");
 }
 .ui-slider-handle {
-  background-color: #A22700;
+  background-color: #16a085;
   border-radius: 50%;
   cursor: pointer;
   height: 18px;
@@ -3365,14 +3365,14 @@ input.search-query {
 }
 .ui-slider-handle:hover,
 .ui-slider-handle:focus {
-  background-color: #D13200;
+  background-color: #48c9b0;
   outline: none;
 }
 .ui-slider-handle:active {
-  background-color: #D13200;
+  background-color: #16a085;
 }
 .ui-slider-range {
-  background-color: #D13200;
+  background-color: #1abc9c;
   border-radius: 30px 0 0 30px;
   display: block;
   height: 100%;
