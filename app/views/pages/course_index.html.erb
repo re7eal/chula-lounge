@@ -16,7 +16,7 @@
 			<div class="row-fluid">
 			  <div class="span12 filter-wrapper">
 			  	<div ng-repeat="teach in teaches |orderBy:'year':true" class="filter-box">
-			  		<h6>Year {{teach.year}}</h6>
+			  		<h6 id="redYear">Year {{teach.year}}</h6>
 			  		<span ng-repeat="prof in teach.professors">Professor {{prof.name}} {{prof.last_name}}<br></span>
 			  	</div>
 			  </div>
