@@ -19,36 +19,8 @@ puts 'user: ' << user.name
 user.confirm!
 user.add_role :admin
 
-	Curriculums = Curriculum.create ([ 
-										
-										{ 	id: 1 ,
-											name: "Information and Communication",
-											abbreviation: "ICE",
-											faculty_id: 1
-									},
 
-										{ 	id: 2 ,
-											name: "Automotive Design and Manufacturing",
-											abbreviation: "ADME",
-											faculty_id: 1
-										},
-
-										{ 	id: 3 ,
-											name: "Aerospace",
-											abbreviation: "AERO",
-											faculty_id: 1
-										},
-
-										{ 	id: 4 ,
-											name: "Nano",
-											abbreviation: "NANO",
-											faculty_id: 1							
-										}
-
-									])
-
-
-	Courses = Course.create([#ICE - Course
+	courses = Course.create([#ICE - Course
 =begin								{ 	title: "Introduction to ICE",
 									number: '2143101',
 									description: "Fundamental engineering concepts and practices. Technology concepts and trends underlying current and future 
@@ -842,29 +814,58 @@ user.add_role :admin
 
 							])
 
-	Curriculum.find(1).courses = Course.where(:number=>['2140201',
+
+	Curriculums = Curriculum.create ([ 
+										
+										{ 	id: 1 ,
+											name: "Information and Communication",
+											abbreviation: "ICE",
+											faculty_id: 1,
+											:courses => Course.where(:number=>['2140201',
 																				'2140202',
 																				'2143201',
 																				'2143203',
 																				'2143310'
 																				])
-	Curriculum.find(2).courses = Course.where(:number=>['2142211',
+									},
+
+										{ 	id: 2 ,
+											name: "Automotive Design and Manufacturing",
+											abbreviation: "ADME",
+											faculty_id: 1,  
+											:courses => Course.where(:number=>['2142211',
 																				'2142241',
 																				'2142261',
 																				'2301312',
 																				'2304154',
 																				'2304194'])
-	Curriculum.find(3).courses = Course.where(:number=>['2145201',
+										},
+
+										{ 	id: 3 ,
+											name: "Aerospace",
+											abbreviation: "AERO",
+											faculty_id: 1,
+											:courses => Course.where(:number=>['2145201',
 																				'2145211',
 																				'2145212',
 																				'2301201',
 																				'2603284'])
-	Curriculum.find(4).courses =  Course.where(:number=>[ '2141201',
+
+										},
+
+										{ 	id: 4 ,
+											name: "Nano",
+											abbreviation: "NANO",
+											faculty_id: 1 ,
+											:courses => Course.where(:number=>[ '2141201',
 																				'2141223',
 																				'2141261',
 																				'2141270',
 																				'2302203',
-																				'2302231'])	
+																				'2302231'])										
+										}
+
+									])
 
 	Faculties = Faculty.create 	([
 
