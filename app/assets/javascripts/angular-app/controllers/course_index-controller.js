@@ -5,7 +5,7 @@ if (s.length > 0) {
   s.slider({
     min: 1,
     max: 10,
-    value: 5,
+    value: 6,
     orientation: "horizontal",
     range: "min"
   }).addSliderSegments(s.slider("option").max);
@@ -25,7 +25,7 @@ if (s.length > 0) {
   s.slider({
     min: 1,
     max: 10,
-    value: 5,
+    value: 6,
     orientation: "horizontal",
     range: "min"
   }).addSliderSegments(s.slider("option").max);
@@ -45,7 +45,7 @@ if (s.length > 0) {
   s.slider({
     min: 1,
     max: 10,
-    value: 5,
+    value: 6,
     orientation: "horizontal",
     range: "min"
   }).addSliderSegments(s.slider("option").max);

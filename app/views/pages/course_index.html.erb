@@ -9,7 +9,7 @@
 			  </div>
 			  <!-- Button trigger modal -->
 <button class="span12 btn btn-lg" id="ratingModalButton" data-toggle="modal" data-target="#ratingModal">
-  Click to rate 
+  Click to rate !
 </button>
 			</div>
 
@@ -58,7 +58,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
          			 <h4 class="modal-title" id="red">Course Review</h4>
 				</div>
-				<div class="modal-body" id="whiteFooter">
+				<div class="modal-body" id="whiteBodyComment">
 					<div ng-repeat="review in comments" class="review-box">
 						<div class="content">{{review.content}}</div>
 						<div class="footer">
@@ -73,7 +73,7 @@
 				</div>
 				</div>
 				  <% if user_signed_in? %>
-				<div class="modal-footer" id="whiteFooter">
+				<div class="modal-footer" id="whiteFooterComment">
 					<div>
 						<textarea ng-enter="review()" id="review-post" class="span12 pull-left"></textarea>
 					</div>
@@ -94,7 +94,7 @@
 						</ul>
 					</div> -->
 					<div class="pull-right">
-						<button ng-click="review()" class="btn btn-default">Submit</button>
+						<button ng-click="review()" id="fModalBtn" class="btn btn-default">Submit</button>
 					</div>
 				  <% else %>
 				    <div class="pull-left" style="padding:30px">Please sign-in to comment</div>
@@ -108,22 +108,22 @@
 <div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" id="whiteBody">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Ratings</h4>
+        <h4 class="modal-title" id="red">Ratings</h4>
       </div>
 
-      <div class="modal-body">
-      	<div><h4>1</h4></div>
+      <div class="modal-body" id="whiteBody">
+      	<div><h6>Knowledge Recieved:</h6></div>
        <div id="know-rating-slider" class="ui-slider"></div>
-		<div><h4>2</h4></div>
+		<div><h6>Letters Grade Difficulty:</h6></div>
        <div id="grad-rating-slider" class="ui-slider"></div>
-		<div><h4>3</h4></div>
+		<div><h6>Textbook Usefulness:</h6></div>
        <div id="text-rating-slider" class="ui-slider"></div>
 
 
        </div>
-      <div class="modal-footer">
+      <div class="modal-footer" id="whiteFooter">
         <button type="button" id="fModalBtn" class="btn btn-primary">Submit</button>
       </div>
     </div><!-- /.modal-content -->

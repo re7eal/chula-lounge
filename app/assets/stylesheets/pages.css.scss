@@ -475,8 +475,9 @@ input[type="search"]::-webkit-input-placeholder{
   }
 
 	#reviewModal {
-		width:824px;
-		margin-left:-412px;
+		width:1500px;
+		margin-left:-750px;
+    margin-top: -60px;
 		.dropdown {
 			li {
 				float:left;
@@ -532,17 +533,23 @@ input[type="search"]::-webkit-input-placeholder{
            &.like.active {
             lk {
               font-weight:bold;
+              
+              color:#D13200;
             }
             .badge {
               font-weight:bold;
+              
             }
           }
           &.dislike.active {
             lk {
               font-weight:bold;
+              color:#D13200;
+              
             }
             .badge {
               font-weight:bold;
+              
             }
           }
 			  	a {
@@ -606,7 +613,7 @@ input[type="search"]::-webkit-input-placeholder{
     color:#A22700;
     lk {
       color:#A22700;
-      font-size: 15px;
+      font-size: 14px;
 
     }
     lk:hover {
@@ -616,6 +623,7 @@ input[type="search"]::-webkit-input-placeholder{
   }
   #red {
     color:#A22700;
+    font-size: 32px;
   }
   #redHover {
     color:#A22700;
@@ -629,4 +637,16 @@ input[type="search"]::-webkit-input-placeholder{
   }
   #whiteFooter{
     background-color: white;
+    border-top: 1px solid #ebedef;
+  }
+  #whiteBody{
+    background-color: white;
+  }
+   #whiteBodyComment{
+    background-color: white;
+    max-height: 600px;
+  }
+#whiteFooterComment{
+    background-color: white;
+
   }
