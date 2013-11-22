@@ -226,7 +226,7 @@ App.controller('PageCourseRegister', ['$scope','$window', '$http', 'Professor',
 		send.curriculums = adjust_curriculums(c);
 		$http({method:"POST", url:'/save/courses.json', data: send}).success(function(data) {
 			console.log(data);
-			$window.location.href="../pages/nav/" + c[0].id + "/course/" + data.id;
+			$window.location.href="../pages/nav/" + 1 + "/course/" + data.id;
 		}).error(function(data) {
 			var msg = "";
 			angular.forEach(data, function(value, key){
