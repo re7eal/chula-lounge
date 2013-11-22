@@ -470,14 +470,14 @@ user.add_role :admin
 											ambient. Refractory materials and their classification; properties of important refractory 
 											materials; composite materials: types and properties of composite materials; fiber and 
 											their interfaces; geometrical properties; elasticity; nanomaterials.",
-									semester:,
+									year: 2,
 									semester: 1
 								},
 
 								{ 	title: "Mathematics for Nanotechnology",
 									number: '2141223',
 									description: "Mathematical knowledge and skills for nanotechnology.",
-									semester:,
+									year: 2,
 									semester: 1
 								},
 
@@ -486,7 +486,7 @@ user.add_role :admin
 									description: "Analysis of force systems and their equilibria as applied to engineering systems. Stresses 
 											and strains; mechanical properties of materials; hooke law, elastic modulus, stress in 
 											beam, shear force, bending moment diagram, torsion, buckling of columns, mohr circle.",
-									semester:,
+									year: 2,
 									semester: 1
 								},
 
@@ -499,7 +499,7 @@ user.add_role :admin
 											transfer functions; periodic waveforms; Fourier series; sinusoidal waveforms; phasor 
 											representations; impedances and admittances; sinusoidal steady-state analysis; 
 											frequency responses; three-phase circuits.",
-									semester:,
+									year: 2,
 									semester: 1
 								},
 
@@ -508,7 +508,7 @@ user.add_role :admin
 									description: "Fundamental laboratory techniques concerning the separation, purification and 
 											determination of physical constants of organic compounds; chemical reactions of organic 
 											compounds of various functional groups; synthesis of certain target molecules.",
-									semester:,
+									year: 2,
 									semester: 1
 								},
 
@@ -518,7 +518,7 @@ user.add_role :admin
 											structure and quantum chemistry; chemical bonding; the investigation for molecular 
 											structure; nuclear chemistry; the laws of chemical thermodynamics; free energy and 
 											chemical equilibrium; phases rule.",
-									semester:,
+									year: 2,
 									semester: 1
 								},
 =begin								#Year 2/2
@@ -833,7 +833,8 @@ user.add_role :admin
 																				'2302105',
 																				'2304153',
 																				'2304193',
-																				'5501112'
+																				'5501112',
+																				'5500222'
 																				])
 									},
 
@@ -977,12 +978,12 @@ user.add_role :admin
 
 	Teaches = Teach.create([
 		{
-			semester:,
+			year: 2012,
 			professor_id: 1,
 			course_id: 1
 		},
 		{
-			semester:,
+			year: 2013,
 			professor_id: 1,
 			course_id: 1
 		}
