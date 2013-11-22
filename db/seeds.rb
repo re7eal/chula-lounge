@@ -97,10 +97,10 @@ user.add_role :admin
 									number: '2190151',
 									description: "Programming in high-level language, programming tools, programming styles and convention, debugging.",
 									year: 1,
-									semester: 1
+									semester: 2
 								},
 
-								{ 	title: "Probability and Statistics for Information and Communication Engineering",
+								{ 	title: "Probability and Statistics for ICE",
 									number: '2143122',
 									description: "Discrete probability; probability space, counting techniques, conditional probability and independent events, 
 											random variables, binomial and multinomial distributions, Poisson distribution, Bayes theorem, expected value, 
@@ -114,21 +114,22 @@ user.add_role :admin
 									description: "Sets, relations, functions, theorem and proof; combinatorics; counting, principle of inclusion exclusion, 
 											recurrent relations, generating functions; graphs and trees; introduction to number theory. ",
 									year: 1,
-									semester: 2,
+									semester: 2
 								},
+
 
 								{ 	title: "Chemistry for Engineers",
 									number: '2302105',
-									description: "",
+									description: "dsds",
 									year: 1,
-									semester: 1,
+									semester: 2
 								},
 
 								{ 	title: "General Chemistry Laboratory",
 									number: '2302103',
-									description: "",
+									description: "dsds",
 									year: 1,
-									semester: 1,
+									semester: 2
 								},
 								#Year 2/1
 								{ 	title: "Electrical Circuits",
@@ -822,6 +823,7 @@ user.add_role :admin
 											abbreviation: "ICE",
 											faculty_id: 1,
 											:courses => Course.where(:number=>['2140201',
+																				'2143101',
 																				'2140202',
 																				'2143201',
 																				'2143203',
@@ -834,7 +836,43 @@ user.add_role :admin
 																				'2304153',
 																				'2304193',
 																				'5501112',
-																				'5500222'
+																				'5500222',
+																				'2104441',
+																				'2140105',
+																				'2143110',
+																				'2143122',
+																				'2143210',
+																				'2143221',
+																				'2143222',
+																				'2143231',
+																				'2143241',
+																				'2143301',
+																				'2143303',
+																				'2143304',
+																				'2143321',
+																				'2143322',
+																				'2143323',
+																				'2143324',
+																				'2143401',
+																				'2143404',
+																				'2143406',
+																				'2143407',
+																				'2143409',
+																				'2143410',
+																				'2143411',
+																				'2143416',
+																				'2143417',
+																				'2143418',
+																				'2143420',
+																				'2143421',
+																				'2143423',
+																				'2143424',
+																				'2143425',
+																				'2143496',
+																				'2143499',
+																				'2183101',
+																				'2301108',
+																				'5501122'
 																				])
 									},
 

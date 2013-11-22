@@ -558,6 +558,8 @@ input[type="search"]::-webkit-input-placeholder{
 		.review-box {
 			border-bottom:1px solid #ebedef;
 			.content {
+         width: 100%;
+       word-wrap: break-word;
 				margin-bottom:0px;
 				font-size:16px;
 			}
@@ -573,6 +575,8 @@ input[type="search"]::-webkit-input-placeholder{
 			padding:16px 5px 0 5px;
 			overflow:hidden;
 			.content {
+        width: 100%;
+       word-wrap: break-word;
 				margin-bottom:20px;
 				font-size:18px;
 				line-height:135%;
