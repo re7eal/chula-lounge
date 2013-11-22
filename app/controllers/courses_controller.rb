@@ -43,9 +43,8 @@ def index
   end
 
   def curriculum_query
-    @courses = Course.joins(:curriculums).where("curriculums.id = ? AND year = ? AND semester = ?",
+     @courses = Course.joins(:curriculums).where("curriculums.id = ? AND year = ? AND semester = ?",
       "#{params[:id]}","#{params[:year]}", "#{params[:semester]}")
-
     respond_to do |format|
       format.json { render :query}
     end

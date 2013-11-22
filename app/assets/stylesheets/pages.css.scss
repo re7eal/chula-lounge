@@ -22,6 +22,14 @@ $darkred: #A22700;
 }
 }
 
+#ise{
+  border:2px solid #A22700;
+  color: #A22700;
+ &:hover{
+  color: #D13200;
+ }
+}
+
 #bba{
   border:2px solid #2CBBFF;
   color: #2CBBFF;
@@ -524,8 +532,8 @@ input[type="search"]::-webkit-input-placeholder{
   }
 
 	#reviewModal {
-		width:1500px;
-		margin-left:-750px;
+		width:80%;
+		margin-left: -40%;
     margin-top: -60px;
 		.dropdown {
 			li {
@@ -705,7 +713,8 @@ input[type="search"]::-webkit-input-placeholder{
 #redYear{
   color: #A22700;
 }
-a {
+
+.my-class{
   color: #A22700;
   text-decoration: none;
   -webkit-transition: 0.25s;
@@ -713,8 +722,9 @@ a {
   -o-transition: 0.25s;
   transition: 0.25s;
   -webkit-backface-visibility: hidden;
-}
-a:hover {
+&:hover {
   color: #D13200;
   text-decoration: none;
 }
+}
+
