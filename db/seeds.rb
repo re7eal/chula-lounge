@@ -21,42 +21,42 @@ user.add_role :admin
 
 
 	courses = Course.create([#ICE - Course
-=begin								{ 	title: "Introduction to ICE",
+							{ 	title: "Introduction to ICE",
 									number: '2143101',
 									description: "Fundamental engineering concepts and practices. Technology concepts and trends underlying current and future 
 											uses of information and communication technology. Introduction to engineering management including 
 											important aspects of management science.",
-									curriculum_id: 1,
-									year: 2012
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "English for Engineering I",
 									number: '5500111',
 									description: "Grammar; use of simple sentences; writing mechanics and process; writing and vision aids to good English.",
-									curriculum_id: 5,
-									year: 2012
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "Communicative English I",
 									number: '5501112',
 									description: "",
-									curriculum_id: 5,
-									year: 2013
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "English for Engineering II",
 									number: '5500222',
 									description: "Use of more complex sentences; expressive and creative writing; writing research papers and technical reports. ",
-									curriculum_id: 5,
-									year: 2012
+									year: 1,
+									semester: 2
 								},
 
 								{ 	title: "Calculus I",
 									number: '2301107',
 									description: "Limit, continuity, differentiation and integration of real valued functions of a real variable and their 
 											applications; techniques of integration; improper integrals.",
-									curriculum_id: 5,
-									year: 2013
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "Calculus II",
@@ -65,39 +65,39 @@ user.add_role :admin
 											elementary functions; numerical integration; vectors, lines and planes in three dimensional space; calculus of 
 											vector valued functions of one variable; calculus of real valued functions of two variables; introduction to 
 											differential equations and their applications.",
-									curriculum_id: 5,
-									year: 2012
+									year: 1,
+									semester: 2
 								},
 
 								{ 	title: "Physics for Engineers",
 									number: '2304153',
 									description: "Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations and waves, 
 											elements of electromagnetism, optics, modern physics.",
-									curriculum_id: 5,
-									year: 2013
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "Physics Laboratory for Engineers",
 									number: '2304193',
 									description: "Measurement and precision; experiments on simple harmonic motion, radius of gyration, dynamics of rotation, 
 											velocity of sound, viscosity of fluids.",
-									curriculum_id: 5,
-									year: 2013
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "Computer Programming",
 									number: '2190101',
 									description: "Computer concepts; computer components; hardware and software interaction; EDP concepts; program design 
 											and development methodology; high-level language programming. ",
-									curriculum_id: 1,
-									year: 2013
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "Computer Programming Lab",
 									number: '2190151',
 									description: "Programming in high-level language, programming tools, programming styles and convention, debugging.",
-									curriculum_id: 1,
-									year: 2013
+									year: 1,
+									semester: 1
 								},
 
 								{ 	title: "Probability and Statistics for Information and Communication Engineering",
@@ -105,32 +105,32 @@ user.add_role :admin
 									description: "Discrete probability; probability space, counting techniques, conditional probability and independent events, 
 											random variables, binomial and multinomial distributions, Poisson distribution, Bayes theorem, expected value, 
 											conditional expectation, variance; continuous probability.",
-									curriculum_id: 1,
-									year: 2012
+									year: 1,
+									semester: 2
 								},
 
 								{ 	title: "Discrete Mathematics",
 									number: '2143110',
 									description: "Sets, relations, functions, theorem and proof; combinatorics; counting, principle of inclusion exclusion, 
 											recurrent relations, generating functions; graphs and trees; introduction to number theory. ",
-									curriculum_id: 5,
-									year: 2012
+									year: 1,
+									semester: 2,
 								},
 
 								{ 	title: "Chemistry for Engineers",
 									number: '2302105',
 									description: "",
-									curriculum_id: 5,
-									year: 2013
+									year: 1,
+									semester: 1,
 								},
 
 								{ 	title: "General Chemistry Laboratory",
 									number: '2302103',
 									description: "",
-									curriculum_id: 5,
-									year: 2013
+									year: 1,
+									semester: 1,
 								},
-=end								#Year 2/1
+								#Year 2/1
 								{ 	title: "Electrical Circuits",
 									number: '2140201',
 									description: "DC circuit analysis; Kirchhoff laws; Thevenin and Norton theorem, semiconductor devices; op amps; 
@@ -176,8 +176,8 @@ user.add_role :admin
 								{ 	title: "Technical Communication for International Engineers",
 									number: '2143222',
 									description: "How to write a descriptions or documents related to engineering",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Signal and Linear Systems",
@@ -185,8 +185,8 @@ user.add_role :admin
 									description: "Fundamental engineering concepts and practices. Technology concepts and trends underlying current and future 
 											uses of information and communication technology. Introduction to engineering management including 
 											important aspects of management science.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Application Programming",
@@ -194,8 +194,8 @@ user.add_role :admin
 									description: "Application programming methodology; object-oriented programming, event-driven programming; 
 											Multithreading; error and exception handling; application programming interface (API), graphical user interface 
 											(GUI).",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Computer Architecture and Organization",
@@ -203,8 +203,8 @@ user.add_role :admin
 									description: "Performance metrics; central processing unit; hardwired and microprogram of control units; instruction level 
 											parallelism: pipeline, superscalar; memory system: cache memory, virtual memory, disk array; development and 
 											future of architecture.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 								#Year 3/1
 								{ 	title: "Principles of Software Engineering",
@@ -212,8 +212,8 @@ user.add_role :admin
 									description: "Design tools and techniques, top down design, modular design, software tools, debugging, test data; software 
 											reliability, theory and concepts, errors and faults and estimating, reliability models, availability models; 
 											management techniques, cost estimation, software maintenance. ",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Database Management Systems",
@@ -223,16 +223,16 @@ user.add_role :admin
 											normal forms of data relations; canonical schema, data independence; data description language; query 
 											facilities: relational algebra, relational calculus, data structures for establishing relations, query functions, design 
 											and translation strategies; file organization and file security: data integrity and reliability. ",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Operations Management",
 									number: '2143304',
 									description: "Operations strategies; inventory and distribution management; capacity management; aggregate planning; 
 											master production scheduling; material requirements planning; operation scheduling; project management.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Introduction to Communication",
@@ -240,8 +240,8 @@ user.add_role :admin
 									description: "Signal and noise analysis; analog and digital modulation and detection systems; Nyquist sampling theorem,
 											quantization; digital baseband systems; digital modulation such as ASK, PSK, FSK, MSK and QAM; information 
 											transmission, synchronization and channel coding; applications of communication systems.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 								#Year 3/2
 								{ 	title: "Telecommunication Systems",
@@ -250,15 +250,15 @@ user.add_role :admin
 											twisted pair, coaxcial cable, terrestrial microwave system, satellite microwave system, optical fiber system; 
 											switching architecture, circuit and packet; basic queuing theory and traffic analysis; network design and 
 											optimization; OSI model; Broadband networks, IP networks, WDM networks, SONET/SDH, Gigabit networks.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Engineering Management for International Engineers",
 									number: '2143310',
 									description: "Risk Mangement, Finance, Quality Management,",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Enterprise Information Systems",
@@ -266,16 +266,16 @@ user.add_role :admin
 									description: "Enterprise information systems; information technology infrastructure; impact of information systems on 
 											organizations; information technology and business strategy; e-business and e-commerce; ethical and social 
 											issues related to technology; technology decisions; business value of information systems.",
-									curriculum_id: 5,
-									year: 2013		
+									year:,
+									semester:		
 								},
 
 								{ 	title: "Software Project Management",
 									number: '2143324',
 									description: "Essence of software project management; scope of software project; project management approaches; project 
 											estimation; software quality assurance; case study on project life cycle.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Principles of Data Communication",
@@ -285,8 +285,8 @@ user.add_role :admin
 											detection, error correction, data link control protocols), Point-to-point protocols at network layer (routing, flow 
 											control, error recovery), Delay models (basic queuing theory), Multi-access communications (Aloha, CSMA, 
 											multi-access reservations), System design considerations.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 								#Year 4/1
 								{ 	title: "Multimedia Engineering",
@@ -294,8 +294,8 @@ user.add_role :admin
 									description: "Introduction to Multimedia Engineering. Text Coding Standards Image Coding Standards. Video Coding 
 											Standards. Audio Coding Standards. Speech Coding Standards. IP networks. Wireless networks. Multimedia 
 											Communication Protocols. Multimedia Communication Applications.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Telecommunication Management",
@@ -303,15 +303,15 @@ user.add_role :admin
 									description: "Telecommunication Technology and Trends. Telecommunication Markets. Telecommunication Economics. 
 											Telecommunication Law and Policy. Telecommunication Licensing. Competition in Telecommunication 
 											Business. Telecommunication Project Management.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "User Interface Design",
 									number: '2143416',
 									description: "Design, implementation, and evaluation of human computer interfaces",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Ubiquitous Computing",
@@ -319,16 +319,16 @@ user.add_role :admin
 									description: "Introduction to ubiquitous computing, overview and basic terminologies, visions and fundamental challenges, 
 											wireless transport, mobile IP, wireless ad hoc networks, wireless sensor networks, medium access control for 
 											wireless sensor networks, middleware, programming wireless networks of embedded systems.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Introduction to Stochastic Modeling",
 									number: '2143420',
 									description: "Stochastic processes and models in operations research; discrete and continuous time parameter; Markov chains; 
 											queuing theory; inventory theory; simulation",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Optimization: Theory and Applications",
@@ -336,22 +336,22 @@ user.add_role :admin
 									description: "Introduction to the theory, algorithms, and applications of optimization; optimization methodologies: linear 
 											programming, network optimization, integer programming, decision trees, and dynamic programming; 
 											applications to logistics, manufacturing, transportation, marketing, project management and finance.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Modern Web Development in Practice",
 									number: '2143496',
 									description: "Developing Web using Ruby on rails",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "High Technology Entrepreneurship",
 									number: '2143423',
 									description: "Becoming a new startup",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Object-oriented Techniques",
@@ -361,8 +361,8 @@ user.add_role :admin
 											The concepts introduced include overloading, multiple inheritance and polymorphism; the analysis, design and 
 											implementation phases of software development, use case driven object-oriented development methodology, 
 											and design patterns and Unified Modelling Language (UML).",
-									curriculum_id: 5,
-									year: 2012
+									year:,
+									semester:
 								},
 
 								{ 	title: "Teletraffic Engineering and Network Optimization ",
@@ -372,8 +372,8 @@ user.add_role :admin
 											of non-queuing/loss-type system and queuing/delay-type system; modeling of system with mobile users; 
 											fundamentals of network simulation; real-time network management and long-term network planning; 
 											application of optimization techniques in network controls; case studies in network design.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 								#Year4/2
 								{ 	title: " Netcentric Architecture ",
@@ -383,8 +383,8 @@ user.add_role :admin
 											UDP), Reliable data transfer, Congestion control, Virtual circuit and datagram networks, The Internet Protocol 
 											(IP), Routing in the Internet, Broadcast and multicast routing, Multimedia networking, Security in computer 
 											networks, Network management.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "System Integration",
@@ -394,8 +394,8 @@ user.add_role :admin
 											standards for Communication Systems Integration; Compatibility and Interoperability Analysis; Hardware vs. 
 											Software Integration; Network Integration; Enterprise Application Integration; Management of Risk from 
 											Integration; Interpersonal skills and Communications for System Engineer; Case Studies in System Integration.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Signal Transmission System ",
@@ -404,8 +404,8 @@ user.add_role :admin
 											transmission line analysis for pulse waveforms, basic of plane wave propagation in free space, basic of signal 
 											transmission in optical fiber, signal dispersion in optical fiber, fundamental of antenna, basic antenna 
 											parameters, design of transmission link, link budget.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "System Security",
@@ -414,22 +414,22 @@ user.add_role :admin
 											physical security; discretionary and mandatory access control; biometrics; information-flow models of security; 
 											covert channels; elementary cryptography; public-key cryptography; logic of authentication; electronic cash; 
 											viruses; firewalls; electronic voting; risk assessment; secure web browsers.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Game Design and Development Process",
 									number: '2143425',
 									description: "",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Computer Graphics",
 									number: '2143424',
 									description: "",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Supply Chain Management",
@@ -438,8 +438,8 @@ user.add_role :admin
 											inventory/service tradeoffs; performance measurement and incentives; global supply chain management; mass 
 											customization; supplier management; design and redesign of products and processes for supply chain 
 											management; tools for analysis; industrial applications; current industry initiatives.",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: "Principle of Wireless Communication",
@@ -449,15 +449,15 @@ user.add_role :admin
 											control; multiple antenna and MIMO systems; space-time codes and decoding algorithms; multiple-access 
 											techniques and multiuser detection; cellular and ad-hoc network topologies; OFDM and ultrawideband systems; 
 											Wireless LANs and MANs, cellular system standards. ",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 
 								{ 	title: " Data Warehousing ",
 									number: '2143411',
 									description: "Data warehouse design, Data Modeling, database design and database access",
-									curriculum_id: 5,
-									year: 2013
+									year:,
+									semester:
 								},
 =end
 							#Nano Course
@@ -470,14 +470,14 @@ user.add_role :admin
 											ambient. Refractory materials and their classification; properties of important refractory 
 											materials; composite materials: types and properties of composite materials; fiber and 
 											their interfaces; geometrical properties; elasticity; nanomaterials.",
-									year: 2013,
+									semester:,
 									semester: 1
 								},
 
 								{ 	title: "Mathematics for Nanotechnology",
 									number: '2141223',
 									description: "Mathematical knowledge and skills for nanotechnology.",
-									year: 2013,
+									semester:,
 									semester: 1
 								},
 
@@ -486,7 +486,7 @@ user.add_role :admin
 									description: "Analysis of force systems and their equilibria as applied to engineering systems. Stresses 
 											and strains; mechanical properties of materials; hooke law, elastic modulus, stress in 
 											beam, shear force, bending moment diagram, torsion, buckling of columns, mohr circle.",
-									year: 2013,
+									semester:,
 									semester: 1
 								},
 
@@ -499,7 +499,7 @@ user.add_role :admin
 											transfer functions; periodic waveforms; Fourier series; sinusoidal waveforms; phasor 
 											representations; impedances and admittances; sinusoidal steady-state analysis; 
 											frequency responses; three-phase circuits.",
-									year: 2013,
+									semester:,
 									semester: 1
 								},
 
@@ -508,7 +508,7 @@ user.add_role :admin
 									description: "Fundamental laboratory techniques concerning the separation, purification and 
 											determination of physical constants of organic compounds; chemical reactions of organic 
 											compounds of various functional groups; synthesis of certain target molecules.",
-									year: 2013,
+									semester:,
 									semester: 1
 								},
 
@@ -518,7 +518,7 @@ user.add_role :admin
 											structure and quantum chemistry; chemical bonding; the investigation for molecular 
 											structure; nuclear chemistry; the laws of chemical thermodynamics; free energy and 
 											chemical equilibrium; phases rule.",
-									year: 2013,
+									semester:,
 									semester: 1
 								},
 =begin								#Year 2/2
@@ -526,189 +526,189 @@ user.add_role :admin
 									number: '2141263',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 
 								{ 	title: "Electronic Devices I",
 									number: '2141273',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 
 								{ 	title: "Electrical and Electronics Laboratory",
 									number: '2141274'
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 
 								{ 	title: "Biochemistry for NANO Engineers",
 									number: '2310229',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 
 								{ 	title: "Statistic for Physical Science",
 									number: '2603284',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 								#Year 3/1
 								{ 	title: "Material Characterization",
 									number: '2141303',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Measurement and Instrumentation",
 									number: '2141375',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Micro and NanofabricationTechnology",
 									number: '2141310',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Quantum Mechanics for Engineers",
 									number: '2141331',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Nanopolymer Engineering",
 									number: '2141341',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Molecular Chemistry",
 									number: '2141345',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Reaction Engineering",
 									number: '2141346',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Fluid Mechanics for International Engineers",
 									number: '2141365',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 								#Year 3/2
 								{ 	title: "Transport Phenomena",
 									number: '2141366',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 
 								{ 	title: "Statistical Thermodynamics",
 									number: '2141368',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 
 								{ 	title: "Control Engineering ",
 									number: '2141376',
 									description: "",
 									curriculum_id: ,
-									year: 2012
+									semester:
 								},
 								#Year 4/1
 								{ 	title: "IT for Communications",
 									number: '2141481',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Nano Seminar",
 									number: '2141490',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Research Methodology",
 									number: '2141491',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Electronic Device II",
 									number: '2141473',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Introduction to VLSI Technolgy",
 									number: '2141475',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Effective Problem Solving for Industry",
 									number: '2141513',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Nanomaterial Synthesis by Aerosol Process",
 									number: '2141553',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Cell and Molecular Biology",
 									number: '2141591',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Microbionanotechnology",
 									number: '2141511',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Microbionanotechnology",
 									number: '2141551',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 
 								{ 	title: "Nanoelectronics",
 									number: '2141417',
 									description: "",
 									curriculum_id: ,
-									year: 2013
+									semester:
 								},
 								#Year 4/2
 =end
@@ -825,7 +825,15 @@ user.add_role :admin
 																				'2140202',
 																				'2143201',
 																				'2143203',
-																				'2143310'
+																				'2143310',
+																				'2190101',
+																				'2190151',
+																				'2301107',
+																				'2302103',
+																				'2302105',
+																				'2304153',
+																				'2304193',
+																				'5501112'
 																				])
 									},
 
@@ -969,12 +977,12 @@ user.add_role :admin
 
 	Teaches = Teach.create([
 		{
-			year: 2012,
+			semester:,
 			professor_id: 1,
 			course_id: 1
 		},
 		{
-			year: 2013,
+			semester:,
 			professor_id: 1,
 			course_id: 1
 		}
