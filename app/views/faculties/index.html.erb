@@ -18,9 +18,9 @@
         <td><%= faculty.abbreviation %></td>
         <td><%= faculty.created_at.to_date %></td>
         <td>
-          <a href= "faculties/<%=faculty.id %>/edit" class="btn btn-mini" type="button">Edit</a>
+          <a href= "faculties/<%=faculty.id %>/edit" class="btn btn-mini rbtn" type="button">Edit</a>
         </td>
-        <td><%= button_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini' %>
+        <td><%= button_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini rbtn' %>
         </td>
       </tr>
     <% end %>
@@ -29,4 +29,4 @@
 
 <br>
 
-<a  href= "/faculties/new" class="btn btn-mini" type="button">New Faculty</a>
+<a  href= "/faculties/new" class="btn btn-mini rbtn" type="button">New Faculty</a>

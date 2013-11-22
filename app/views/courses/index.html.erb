@@ -21,9 +21,9 @@
         <td><%= course.year %></td>
         <td><%= course.created_at.to_date %></td>
          <td>
-          <a href= "/courses/<%=course.id %>/edit" class="btn btn-mini" type="button">Edit</a>
+          <a href= "/courses/<%=course.id %>/edit" class="btn btn-mini rbtn" type="button">Edit</a>
         </td>
-        <td><%= button_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini' %>
+        <td><%= button_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini rbtn' %>
         </td>
       </tr>
     <% end %>
@@ -32,4 +32,4 @@
 
 <br>
 
-<a  href= "<%= pages_course_register_path %>" class="btn btn-mini" type="button">New Course</a>
+<a  href= "<%= pages_course_register_path %>" class="btn btn-mini rbtn" type="button">New Course</a>

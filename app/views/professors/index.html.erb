@@ -18,9 +18,9 @@
         <td><%= professor.last_name %></td>
         <td><%= professor.created_at.to_date %></td>
         <td>
-          <a href= "professors/<%=professor.id %>/edit" class="btn btn-mini" type="button">Edit</a>
+          <a href= "professors/<%=professor.id %>/edit" class="btn btn-mini rbtn" type="button">Edit</a>
         </td>
-        <td><%= button_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini' %>
+        <td><%= button_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } , class: :'btn btn-mini rbtn' %>
         </td>
       </tr>
     <% end %>
@@ -29,5 +29,5 @@
 
 <br>
 
-<a  href= "/professors/new" class="btn btn-mini" type="button">New Professor</a>
+<a  href= "/professors/new" class="btn btn-mini rbtn" type="button">New Professor</a>
 

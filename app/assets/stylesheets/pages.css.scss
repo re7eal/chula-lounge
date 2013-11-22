@@ -734,4 +734,10 @@ input[type="search"]::-webkit-input-placeholder{
 #NAModal{
   top: 30%;
 }
+.rbtn{
+  background-color: #A22700;
+  &:hover{
+    background-color: #D13200;
+  }
+}
 
