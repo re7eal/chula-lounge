@@ -48,7 +48,6 @@ $scope.rate = function() {
 	var gradRating = gradSlider.slider("value");
 	var textRating = textSlider.slider("value");
 	var ratings = [
-<<<<<<< HEAD
 		knowSlider.slider("option","value"
 		),
 		gradSlider.slider("option","value"
@@ -76,19 +75,6 @@ $scope.rate = function() {
 	}).error(function(data,status) {
 	})
 
-=======
-knowSlider.slider("option","value"
-),
-gradSlider.slider("option","value"
-),
-textSlider.slider("option","value"
-)
-]
-console.log(ratings);
-console.log(knowRating);
-console.log(gradRating);
-console.log(textRating);
->>>>>>> parent of 30e35f7... Added rate function
 }
 
 	var focus_duration = 800;
@@ -239,13 +225,6 @@ console.log(textRating);
 
 	$scope.init = function(id,userid) {
 	$scope.course_id = id;
-	if(userid != undefined) {
-		$scope.user_id = userid;
-		$scope.has_user = true;
-	} else {
-		$scope.user_id = null;
-		$scope.has_user = false;
-	}
 
 	$http({method:'GET', url: '/courses/' + id + '.json'}).
 		  success(function(data) {
