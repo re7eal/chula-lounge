@@ -919,42 +919,8 @@ user.add_role :admin
 									{ 	id: 1,
 										name: "Faculty of Engineering",
 										abbreviation: "ISE"
-									},
+									}
 
-									{ 	id: 2,
-										name: "Faculty of Commerce and Accountancy",
-										abbreviation: "BBA"
-									},
-
-									{ 	id: 3,
-										name: "Faculty of Economics",
-										abbreviation: "EBA"
-									},
-
-									{ 	id: 4,
-										name: "Faculty of Science",
-										abbreviation: "BSAC"
-									},
-
-									{ 	id: 5,
-										name: "Faculty of Arts",
-										abbreviation: "BALAC"
-									},
-
-									{ 	id: 6,
-										name: "Faculty of Psychology",
-										abbreviation: "JIPP"
-									},
-
-									{ 	id: 7,
-										name: "Faculty of Architecture",
-										abbreviation: "INDA"
-									},
-
-									{ 	id: 8,
-										name: "Faculty of Communication Arts",
-										abbreviation: "COMARTS"
-									}				
 
 								])
 	Users = User.create ([

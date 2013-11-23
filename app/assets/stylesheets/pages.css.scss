@@ -436,8 +436,6 @@ input[type="search"]::-webkit-input-placeholder{
 /*================ COURSE_INDEX =============== */
 
 .course-index {
-	/* Variables */
-	$rating-box: rgb(219, 222, 224);
 
   select {
     margin:0;
@@ -455,9 +453,9 @@ input[type="search"]::-webkit-input-placeholder{
 	.rating-box {
 		border:1px solid rgb(189, 195, 199);
 		text-align:center;
-		padding:40px 0 40px 0;
-		font-size:26px;
-    color:#D13200;
+		padding:29px 0 29px 0;
+		font-size:48px;
+    color:#A22700;
 	}
 	.box {
 		border:1px solid rgb(189, 195, 199);
@@ -739,5 +737,12 @@ input[type="search"]::-webkit-input-placeholder{
   &:hover{
     background-color: #D13200;
   }
+}
+.ratingh{
+  vertical-align:text-top;
+  margin-top: -12%;
+  font-size: 13px;
+  margin-bottom: 11%;
+  color: #34495e;
 }
 
