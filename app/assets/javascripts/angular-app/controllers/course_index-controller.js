@@ -55,30 +55,27 @@ $scope.rate = function() {
 		textSlider.slider("option","value"
 		)
 		]
-	console.log(ratings);
-	console.log(knowRating);
-	console.log(gradRating);
-	console.log(textRating);
 
 	var sendingData = {
 		course_id : $scope.course_id,
 		rating : {
-			know_rating: 0,
-			diff_rating: 0,
-			grade_rating: 0
+			know_rating: knowSlider.slider("value"),
+			diff_rating: gradSlider.slider("value"),
+			grade_rating: textSlider.slider("value")
 		}
 	}
 
 	$http({method:"POST", url:'/courses/' + $scope.course_id + '/rate', data: sendingData })
 	.success(function(data, status){
 		console.log(data);
-		
+		console.log("hi2");
 		$scope.rating = {
 			know_rating : average(data,'know_rating'),
 			diff_rating : average(data,'diff_rating'),
 			grade_rating : average(data,'grade_rating')
 		}
 	}).error(function(data,status) {
+		console.log("hi");
 		console.log(data);
 	})
 
