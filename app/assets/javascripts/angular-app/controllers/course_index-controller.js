@@ -48,17 +48,40 @@ $scope.rate = function() {
 	var gradRating = gradSlider.slider("value");
 	var textRating = textSlider.slider("value");
 	var ratings = [
-knowSlider.slider("option","value"
-),
-gradSlider.slider("option","value"
-),
-textSlider.slider("option","value"
-)
-]
-console.log(ratings);
-console.log(knowRating);
-console.log(gradRating);
-console.log(textRating);
+		knowSlider.slider("option","value"
+		),
+		gradSlider.slider("option","value"
+		),
+		textSlider.slider("option","value"
+		)
+		]
+	console.log(ratings);
+	console.log(knowRating);
+	console.log(gradRating);
+	console.log(textRating);
+
+	var sendingData = {
+		course_id : $scope.course_id,
+		rating : {
+			know_rating: 0,
+			diff_rating: 0,
+			grade_rating: 0
+		}
+	}
+
+	$http({method:"POST", url:'/courses/' + $scope.course_id + '/rate', data: sendingData })
+	.success(function(data, status){
+		console.log(data);
+		
+		$scope.rating = {
+			know_rating : average(data,'know_rating'),
+			diff_rating : average(data,'diff_rating'),
+			grade_rating : average(data,'grade_rating')
+		}
+	}).error(function(data,status) {
+		console.log(data);
+	})
+
 }
 
 	var focus_duration = 800;
@@ -208,13 +231,6 @@ console.log(textRating);
 
 	$scope.init = function(id,userid) {
 	$scope.course_id = id;
-	if(userid != undefined) {
-		$scope.user_id = userid;
-		$scope.has_user = true;
-	} else {
-		$scope.user_id = null;
-		$scope.has_user = false;
-	}
 
 	$http({method:'GET', url: '/courses/' + id + '.json'}).
 		  success(function(data) {

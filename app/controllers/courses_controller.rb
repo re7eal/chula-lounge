@@ -34,6 +34,26 @@ def index
 
   end
 
+  def rate
+    @course = Course.find(params[:course_id])
+
+    if user_signed_in?
+      @rating = Rating.find_or_initialize_by_user_id(current_user.id)
+      @rating.update_attributes({
+          :know_rating => rating_params.know_rating,
+          :diff_rating => rating_params.diff_rating,
+          :grade_rating => rating_params.grade_rating
+        })
+
+      if @rating.save
+        render json: @course.ratings
+      else
+        render json: @rating.errors, status: :unprocessable_entity 
+    else
+      head :bad_request
+    end
+  end
+
   def search_query
     @courses = Course.autocomplete(params[:f],params[:q])
     
@@ -139,5 +159,8 @@ def index
     end
     def params2
       params.permit!
+    end
+    def rating_params
+      params.require(:rating).permit(:know_rating, :diff_rating, :grade_rating, :course_id, :user_id)
     end
 end
