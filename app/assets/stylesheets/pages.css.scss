@@ -155,8 +155,15 @@ ul {
   }
 }
 
-#year, #course, #search-tool {
+#year{
   margin-left: 0;
+}
+#search-tool{
+  margin-left: 0;
+}
+#course{
+  margin-left: 0;
+
 }
 
 .big-show {
@@ -751,4 +758,3 @@ input[type="search"]::-webkit-input-placeholder{
   margin-bottom: 11%;
   color: #34495e;
 }
-
