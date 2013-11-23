@@ -670,6 +670,12 @@ input[type="search"]::-webkit-input-placeholder{
       background-color: #D13200;
     }
   }
+  #rModalBtn{
+   background-color: #A22700;
+    &:hover{
+      background-color: #D13200;
+    }
+  }
   .likebox {
     color:#A22700;
     lk {

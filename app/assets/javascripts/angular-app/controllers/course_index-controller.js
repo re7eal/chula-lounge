@@ -67,16 +67,12 @@ $scope.rate = function() {
 
 	$http({method:"POST", url:'/courses/' + $scope.course_id + '/rate', data: sendingData })
 	.success(function(data, status){
-		console.log(data);
-		console.log("hi2");
 		$scope.rating = {
 			know_rating : average(data,'know_rating'),
 			diff_rating : average(data,'diff_rating'),
 			grade_rating : average(data,'grade_rating')
 		}
 	}).error(function(data,status) {
-		console.log("hi");
-		console.log(data);
 	})
 
 }
@@ -188,7 +184,7 @@ $scope.rate = function() {
 				user_id: $scope.user_id,
 				course_id: $scope.course_id
 			}
-
+			console.log("hi");
 			$http({method:'POST', url:'/comments.json', data:comment}).success(function(data) {
 				$('#review-post').val('');
 				data.like = false;
@@ -196,8 +192,9 @@ $scope.rate = function() {
 				data.created_at = $scope.formatDate(data.created_at);
 				$scope.comments.push(data);
 				$scope.top_comments = topComments($scope.comments);
+				console.log(data);
 			}).error(function(data) {
-
+				console.log(data);
 			})
 ;		}
 	}
