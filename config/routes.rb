@@ -11,7 +11,10 @@ ChulaLounge::Application.routes.draw do
   resources :curriculums
   resources :teaches
   resources :courses do
-    post 'rate', to: 'courses#rate'
+    resources :comments do
+      resources :likes
+      resources :dislikes
+    end
   end
   resources :ratings
   resources :comments do

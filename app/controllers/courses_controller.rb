@@ -34,6 +34,7 @@ def index
 
   end
 
+<<<<<<< HEAD
   def rate
     @course = Course.find(params[:course_id])
 
@@ -55,6 +56,8 @@ def index
   end
 
 
+=======
+>>>>>>> parent of 30e35f7... Added rate function
   def search_query
     @courses = Course.autocomplete(params[:f],params[:q])
     
@@ -160,8 +163,5 @@ def index
     end
     def params2
       params.permit!
-    end
-    def rating_params
-      params.require(:rating).permit(:know_rating, :diff_rating, :grade_rating, :course_id, :user_id)
     end
 end
