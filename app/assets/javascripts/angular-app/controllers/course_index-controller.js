@@ -178,7 +178,9 @@ $scope.rate = function() {
 
 	$scope.review = function() {
 		var value = $('#review-post').val();
-		if($scope.user_id != undefined && value != ''){
+		console.log("hi1");
+		if(value != ''){
+			console.log("hi2");
 			var comment = {
 				content: value,
 				user_id: $scope.user_id,

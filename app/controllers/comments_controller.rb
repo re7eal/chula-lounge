@@ -65,9 +65,11 @@ class CommentsController < ApplicationController
 
   # POST /comments
   # POST /comments.json
-  def create
+   def create
     @comment = Comment.new(comment_params)
-
+    if user_signed_in?
+      @comment.user_id = current_user.id
+    end
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
