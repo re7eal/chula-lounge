@@ -26,7 +26,7 @@ gem 'devise'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
-gem 'thin'
+gem 'unicorn'
 
 group :development do
   gem 'better_errors'
