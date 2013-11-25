@@ -1,4 +1,4 @@
-App.directive('numberMask', function() {
+App.directive('numberMask', [function() {
   return {
     require: 'ngModel',
     link: function (scope, element, attr, ngModelCtrl) {
@@ -14,9 +14,9 @@ App.directive('numberMask', function() {
       ngModelCtrl.$parsers.push(fromUser);
     }
   }; 
-});
+}]);
 
-App.directive('ngEnter', function () {
+App.directive('ngEnter', [function () {
     return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
             if(event.which === 13 && event.shiftKey != true) {
@@ -28,4 +28,4 @@ App.directive('ngEnter', function () {
             }
         });
     };
-});
+}]);

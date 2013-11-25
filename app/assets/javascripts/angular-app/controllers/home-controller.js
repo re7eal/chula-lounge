@@ -1,4 +1,4 @@
-App.controller('PageIndex', ['$scope', '$http',function($scope, $http){
+App.controller('PageIndex', ['$scope', '$http', function($scope, $http){
 
 	$http({method:'GET', url: '/faculties.json'}).
 		success(function(data){

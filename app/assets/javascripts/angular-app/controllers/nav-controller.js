@@ -1,4 +1,4 @@
-App.controller('PageNav', ['$scope','$http', function($scope, $http, Course){
+App.controller('PageNav', ['$scope','$http', function($scope, $http){
 			
 			//Scrollbar
 			setTimeout(function() {
