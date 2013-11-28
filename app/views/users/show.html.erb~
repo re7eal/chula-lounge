@@ -6,16 +6,16 @@
 					<div class="span2">
 						<img src="">
 					</div>
-					<div class="span6">
+					<div class="span8">
 						<h4><%= @user.name %></h4>
 						<p>Email : <%= @user.email if @user.email %></p>
 					</div>
-					<div class="offset2 span2">
+					<div class="span2">
 						<div class="well userScore" style="padding:0px" >
 							<div style="text-align:center">
 
 								<a href="#" style="margin:0px;padding:0px;" ><span class="fui-triangle-up"style="font-size:20px; "></span></a>
-								<h4 class="vote-count-post" style="margin:0px;padding:0px;">7</h4>
+								<h4 class="vote-count-post" style="margin:0px;padding:0px;">-</h4>
 								<a  href="#" style="margin:0px;padding:0px;"><span class="fui-triangle-down"style="font-size:20px; "></span></a>
 								<p style="font-size:11px">Votes</p>
 
