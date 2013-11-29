@@ -1,3 +1,13 @@
+/*
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
 @import "bootstrap";
 body { padding-top: 70px; }
 @import "bootstrap-responsive";
+
+  .breadcrumb {
+  	margin: -5px 0px 10px 20px;
+  }
